@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Jan 2021 07:42:54 +0900</lastBuildDate>
+    
+        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Posts</title>
+      <link>http://example.org/post/</link>
+      <pubDate>Fri, 29 Jan 2021 07:42:54 +0900</pubDate>
+      
+      <guid>http://example.org/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First_entry</title>
+      <link>http://example.org/first_entry/</link>
+      <pubDate>Fri, 29 Jan 2021 07:21:05 +0900</pubDate>
+      
+      <guid>http://example.org/first_entry/</guid>
+      <description>Hello</description>
+    </item>
+    
+  </channel>
+</rss>
