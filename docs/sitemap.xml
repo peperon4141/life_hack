@@ -3,31 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://peperon4141.github.io/life_hack/</loc>
     <lastmod>2021-01-29T07:42:54+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://peperon4141.github.io/life_hack/post/</loc>
     <lastmod>2021-01-29T07:42:54+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/sample_post/</loc>
+    <loc>https://peperon4141.github.io/life_hack/post/sample_post/</loc>
     <lastmod>2021-01-29T07:42:54+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/first_entry/</loc>
+    <loc>https://peperon4141.github.io/life_hack/first_entry/</loc>
     <lastmod>2021-01-29T07:21:05+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://peperon4141.github.io/life_hack/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://peperon4141.github.io/life_hack/tags/</loc>
   </url>
   
 </urlset>
