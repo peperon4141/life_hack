@@ -1,5 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
-theme = "hugo-blog-jeffprod"
+theme = "jeffprod"
 publishDir = "docs"
+canonifyurls = true
