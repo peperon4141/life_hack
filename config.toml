@@ -56,6 +56,10 @@ twitter = "https://twitter.com/magic4141"
 inline = false
 path = "images/icon.png"
 
+[taxonomies]
+tag = "tags"
+category = "categories"
+
 [menu]
 [[menu.main]]
 name = "プログラミング"
