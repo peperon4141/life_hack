@@ -1,6 +1,68 @@
-baseURL = "https://peperon4141.github.io/life_hack/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+title = "東京ライフハック"
+languageCode = "ja-JP"
+DefaultContentLanguage = "ja"
+
 theme = "axiom"
-publishDir = "docs"
-canonifyurls = true
+
+publishDir = "docs" # ビルド時の出力ディレクトリ
+# canonifyurls = true # リンクを絶対パスにする場合はtrue  
+
+
+# Pagination (increase number for production)
+paginate = 2
+# Canonify relative URLs using baseURL
+canonifyURLs = false
+# Length of snippet on post index and structured data
+summaryLength = 40
+# Max posts to show in atom feed
+rssLimit = 100
+# Enable Emoji's in posts
+enableEmoji = true
+# Output a robots.txt file (see the 'Frontmatter' Docs page)
+enableRobotsTXT = true
+# Don't automatically mangle titles
+pluralizelisttitles = false
+
+[params]
+mainSections = ["posts"] # Sections to include in lists and indexes
+copyrightYear = 2017 # Footer copyright start year, prepended to current year, e.g., 2000-2020
+# Posts Date format
+# Go Reference time: Mon Jan 2 15:04:05 MST 2006
+dateFormat = "2006.01.02"
+# Chroma Syntax Highlighting
+# Options: dark, light, false
+highlight = "dark"
+disableThemeAttribution = true
+
+# Max Width Page sections
+maxWidthTitle = "max-w-2xl"
+maxWidthFeature = "max-w-5xl"
+maxWidthContent = "max-w-2xl"
+
+# Max Width Template parts
+maxWidthHeader = "max-w-6xl"
+maxWidthFooter = "max-w-6xl"
+
+[params.brand]
+# domain = "up-tri.me"
+# email = "yaki-shake@up-tri.me"
+
+[params.social]
+# github = "https://github.com/up-tri"
+twitter = "https://twitter.com/magic4141"
+# footer = ["twitter", "github"]
+
+[params.logo]
+inline = false
+path = "images/icon.png"
+
+[menu]
+[[menu.main]]
+name = "プログラミング"
+url = "/programing/"
+weight = 2
+
+[[menu.foot]]
+name = "プログラミング"
+url = "/programing/"
+weight = 2

@@ -6,12 +6,18 @@
 hugo new site {{ site name }}
 ```
 
-### テーマ配置
+## テーマ設定
+### テーマ追加
 以下コマンドでthemesフォルダにテーマを追加。
 ```
 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 ```
 config.tomlに `theme = "ananke"` 
+
+### テーマ削除
+```
+git submodule deinit themes/ananke
+```
 
 ## ディレクトリ構成
 
@@ -44,3 +50,6 @@ publishDir以下に作成。
 ```
 hugo
 ```
+
+## 参考
+https://girigiribauer.com/tech/20200128/
