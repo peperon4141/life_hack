@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://peperon4141.github.io/life_hack/sitemap.xml
+Sitemap: sitemap.xml

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>東京ライフハック</title>
-    <link>https://peperon4141.github.io/life_hack/</link>
+    <link>/</link>
     <description>Recent content on 東京ライフハック</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-JP</language><atom:link href="https://peperon4141.github.io/life_hack/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-JP</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>世田谷暮らし歴2年のWEB系エンジニアのライフハック術を紹介</title>
-      <link>https://peperon4141.github.io/life_hack/</link>
+      <link>/</link>
       <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/</guid>
+      <guid>/</guid>
       <description>こんにちは</description>
     </item>
     

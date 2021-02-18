@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://peperon4141.github.io/life_hack/</loc>
+    <loc>/</loc>
     <lastmod>2021-02-18T00:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://peperon4141.github.io/life_hack/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   <url>
-    <loc>https://peperon4141.github.io/life_hack/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   <url>
-    <loc>https://peperon4141.github.io/life_hack/</loc>
+    <loc>/</loc>
   </url>
 </urlset>
