@@ -5,7 +5,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Categories</title>
+        <title>Hugoのディレクトリ構造を理解する</title>
         
         <style>
 
@@ -70,9 +70,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.79.0" />
         
-            <link href="https://peperon4141.github.io/life_hack/categories/index.xml" rel="alternate" type="application/rss&#43;xml" title="東京ライフハッカー" />
-            <link href="https://peperon4141.github.io/life_hack/categories/index.xml" rel="feed" type="application/rss&#43;xml" title="東京ライフハッカー" />
-        
 
         
 
@@ -90,7 +87,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Categories</a>
+                    <a class="navbar-brand visible-xs" href="#">Hugoのディレクトリ構造を理解する</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -119,28 +116,52 @@
 
 <main>
 
-    <h2>Categories</h2>
-
-     <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/categories/hugo/">hugo</a></h4>
-    <h5>February 23, 2021</h5>
-    
+    <div>
+        <h2>Hugoのディレクトリ構造を理解する</h2>
+        <h5></h5>
+        
+<a href="https://peperon4141.github.io/life_hack/tags/hugo"><kbd class="item-tag">hugo</kbd></a>
 
 
+    </div>
+
+    <div align="start" class="content"><p>Hugoで生成されるディレクトリやファイルの構造を理解します。</p>
+<h2 id="hugoで生成される構造">Hugoで生成される構造</h2>
+<pre><code>.
+├── config.toml
+├── archetypes
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre><p>参照: <a href="https://gohugo.io/getting-started/directory-structure/">Directory Structure</a></p>
+<h2 id="configtoml">config.toml</h2>
+<p>Hugoの設定を記述します。</p>
+<p>環境毎に設定を変更したい場合は、configディレクトリが有効です。（configディレクトリはデフォルトでは作成されません）
+configディレクトリを使用することで、環境ごとの追加設定を定義することもできます。</p>
+<h2 id="archetypes">archetypes</h2>
+<p>新しいコンテンツを追加する際のテンプレートを定義できます。
+参照: <a href="https://gohugo.io/content-management/archetypes/">Archetypes</a></p>
+<h2 id="content">content</h2>
+<p>記事を入れるディレクトリです。
+このディレクトリ構造はそのまま記事のURLになります。
+それぞれのディレクトリは、セクションとして扱われます。</p>
+<p>例えば、 <code>blog</code> , <code>articles</code> , <code>tutorials</code> のように、記事をセクション分けしたい場合は、
+<code>content/blog</code> , <code>content/articles</code> , <code>content/tutorials</code> のようにディレクトリを作るだけです。</p>
+<h2 id="data">data</h2>
+<p>設定ファイルを使用したい場合に、このディレクトリを使用できます。
+YAML, JSON, TOMLなどのフォーマットで定義できます。</p>
+<p><a href="https://gohugo.io/templates/data-templates/">サンプル</a>はここにあります。</p>
+<h2 id="layouts">layouts</h2>
+<p>画像、CSS、JavaScriptなどのような、静的コンテンツ(動的に変わらないコンテンツ)を配置します。
+サイトをビルドすると、staticディレクトリのコンテンツはそのままビルド結果にコピーされます。</p>
+<h2 id="resources">resources</h2>
+<p>このディレクトリはデフォルトでは作成されません。
+キャッシュなどのスピードアップのためなどに使用されるディレクトリです。</p>
 </div>
- 
 
 </main>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>

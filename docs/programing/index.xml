@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>世田谷暮らし歴2年のWEB系エンジニアのライフハック術を紹介 on 東京ライフハッカー</title>
-    <link>https://peperon4141.github.io/life_hack/</link>
-    <description>Recent content in 世田谷暮らし歴2年のWEB系エンジニアのライフハック術を紹介 on 東京ライフハッカー</description>
+    <title>Programings on 東京ライフハッカー</title>
+    <link>https://peperon4141.github.io/life_hack/programing/</link>
+    <description>Recent content in Programings on 東京ライフハッカー</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://peperon4141.github.io/life_hack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://peperon4141.github.io/life_hack/programing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HugoのLayoutについて理解する</title>
       <link>https://peperon4141.github.io/life_hack/programing/hugo-layout/</link>

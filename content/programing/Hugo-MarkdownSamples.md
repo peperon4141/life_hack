@@ -1,8 +1,9 @@
 ---
 title: "Markdown記法一覧"
 date: 2021-02-14T09:27:35+09:00
-tags: [hugo]
-Categories: [hugo]
+tags: ["hugo"]
+categories: ["hugo"]
+series: ["hugo"]
 featured_image: ""
 description: ""
 ---

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HugoのLayoutについて理解する</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: #3eccbf;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://peperon4141.github.io/life_hack/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/toml.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.79.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">HugoのLayoutについて理解する</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://peperon4141.github.io/life_hack/">ホーム</a></li>
+                            
+                                <li><a href="https://peperon4141.github.io/life_hack/programing/">プログラミング</a></li>
+                            
+                                <li><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a></li>
+                            
+                                <li><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>HugoのLayoutについて理解する</h2>
+        <h5></h5>
+        
+<a href="https://peperon4141.github.io/life_hack/tags/hugo"><kbd class="item-tag">hugo</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><p>HugoのLayoutの中身について理解していきます。</p>
+<p>Layoutの中身は要はテンプレートで、各種ページのHTMLがレンダリングされる際にこれらのテンプレートが使用されます。</p>
+<h2 id="hugoのページ構成">Hugoのページ構成</h2>
+<p><a href="https://gohugo.io/templates/section-templates/">Section Page Templates</a></p>
+<h3 id="contentディレクトリ">Contentディレクトリ</h3>
+<p>HTMLレンダリング前の構成は以下のようになります。</p>
+<pre><code>content/
+  ├── _index.html（ホームページ）
+  ├── page-1.md（通常ページ）
+  ├── page-2.md（通常ページ）
+  ├── section-1/
+  │     ├── _index.html（セクションページ）
+  │     ├── page-1-1.html（通常ページ）
+  │     └── page-1-2.html（通常ページ）
+  └── section-2/
+        ├── _index.html（セクションページ）
+        ├── page-2-1.html（通常ページ）
+        └── page-2-2.html（通常ページ）
+</code></pre><p>これらの各ページに対してHugoが適用するテンプレートを優先度付けしています。</p>
+<h3 id="ページの種類">ページの種類</h3>
+<p>テンプレートが適用されて、HTMLレンダリング後のページの種類は以下のようになります。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">種類</th>
+<th style="text-align:left">説明</th>
+<th style="text-align:left">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">home</td>
+<td style="text-align:left">ホームページ</td>
+<td style="text-align:left">/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">page</td>
+<td style="text-align:left">通常ページ</td>
+<td style="text-align:left">/posts/{投稿名}/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">section</td>
+<td style="text-align:left">セクションページ</td>
+<td style="text-align:left">/{セクション名}/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">taxonomy</td>
+<td style="text-align:left">分類一覧ページ</td>
+<td style="text-align:left">/tags/index.html や /categories/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">term</td>
+<td style="text-align:left">分類絞り込みページ</td>
+<td style="text-align:left">/tags/{タグ名}/index.html や /categories/{カテゴリ名}/index.html</td>
+</tr>
+</tbody>
+</table>
+<p><code>分類一覧ページ</code>や<code>分類絞り込みページ</code>は、通常ページの設定を読み取ってレンダリングされるページです。</p>
+<h2 id="ホームページ">ホームページ</h2>
+<p><a href="https://gohugo.io/templates/homepage/">Homepage Template</a></p>
+<p>ホームページ（content/_index.html)をレンダリングする場合の優先度です。</p>
+<ol>
+<li>/layouts/index.html</li>
+<li>/layouts/home.html</li>
+<li>/layouts/list.html</li>
+<li>/layouts/_default/index.html</li>
+<li>/layouts/_default/home.html</li>
+<li>/layouts/_default/list.html</li>
+<li>/themes/{テーマ名}/layouts/index.html</li>
+<li>/themes/{テーマ名}/layouts/home.html</li>
+<li>/themes/{テーマ名}/layouts/list.html</li>
+<li>/themes/{テーマ名}/layouts/_default/index.html</li>
+<li>/themes/{テーマ名}/layouts/_default/home.html</li>
+<li>/themes/{テーマ名}/layouts/_default/list.html</li>
+</ol>
+<p>基本ルールは以下のようになります。</p>
+<ul>
+<li>テーマより、独自で定義したテンプレートが優先される</li>
+<li>_defaultフォルダ内より、layouts直下のテンプレートが優先される</li>
+<li>汎用のリストテンプレートなどより、より特化したテンプレートが優先される</li>
+</ul>
+<h2 id="セクションページ">セクションページ</h2>
+<p><a href="https://gohugo.io/templates/section-templates/">Section Page Templates</a></p>
+<p>セクションページ（content/{section_name}/_index.md）をレンダリングする場合の優先度です。</p>
+<ol>
+<li>/layouts/section/{セクション名}.html ← セクション特化型テンプレート</li>
+<li>/layouts/{セクション名}/list.html ← セクション特化型リストテンプレート</li>
+<li>/layouts/_default/section.html</li>
+<li>/layouts/_default/list.html</li>
+<li>省略（テーマ内のテンプレートが上記の優先度と同様使用される）</li>
+</ol>
+<p><code>{セクション名}</code> は特定のセクション名の時だけ使用されるテンプレートです。</p>
+<h2 id="リストテンプレート">リストテンプレート</h2>
+<p><a href="https://gohugo.io/templates/lists/">Lists of Content in Hugo</a></p>
+<p>ホームページやセクションページの優先度でも、リストテンプレートが出てきましたね。</p>
+<p>リストテンプレートは、特定のグループ内の記事一覧を表示するためのテンプレートです。
+例えば、セクションページでリストテンプレートが使用された場合、そのセクションの記事リストを表示するような結果になります。</p>
+<h2 id="シングルページ">シングルページ</h2>
+<p><a href="https://gohugo.io/templates/single-page-templates/">Single Page Templates</a></p>
+<p>通常ページ(content/{投稿名}.md)に適用されるテンプレートです。</p>
+<ol>
+<li>/layouts/{タイプ名}/{レイアウト名}.html</li>
+<li>/layouts/{セクション名}/{レイアウト名}.html</li>
+<li>/layouts/{タイプ名}/single.html</li>
+<li>/layouts/{セクション名}/single.html</li>
+<li>/layouts/_default/single.html</li>
+<li>省略（テーマ内のテンプレートが上記の優先度と同様使用される）</li>
+</ol>
+<h2 id="タクソノミーテンプレート">タクソノミーテンプレート</h2>
+<p><a href="https://gohugo.io/templates/taxonomy-templates/">Taxonomy Templates</a></p>
+<p>分類一覧ページとして表示されるテンプレートです。</p>
+<ol>
+<li>layouts/_default/category.terms.html</li>
+<li>layouts/_default/terms.html</li>
+<li>layouts/_default/taxonomy.html</li>
+<li>layouts/_default/list.html</li>
+<li>省略（テーマ内のテンプレートが上記の優先度と同様使用される）</li>
+</ol>
+<h2 id="最後に">最後に</h2>
+<p><a href="https://gohugo.io/templates/lookup-order/">Hugo&rsquo;s Lookup Order</a></p>
+</div>
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

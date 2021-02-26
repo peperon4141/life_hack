@@ -1,72 +1,73 @@
-title = "東京ライフハック"
-languageCode = "ja-JP"
-DefaultContentLanguage = "ja"
-
-theme = "axiom"
-
+# baseURL = "http://example.com/"
+languageCode = "en-us"
+title = "東京ライフハッカー"
+theme = "minimal"
+# disqusShortname = "username" # delete this to disable disqus comments
+googleAnalytics = ""
 publishDir = "docs" # ビルド時の出力ディレクトリ
-# canonifyurls = true # リンクを絶対パスにする場合はtrue  
-
-
-# Pagination (increase number for production)
-paginate = 2
-# Canonify relative URLs using baseURL
-canonifyURLs = false
-# Length of snippet on post index and structured data
-summaryLength = 40
-# Max posts to show in atom feed
-rssLimit = 100
-# Enable Emoji's in posts
-enableEmoji = true
-# Output a robots.txt file (see the 'Frontmatter' Docs page)
-enableRobotsTXT = true
-# Don't automatically mangle titles
-pluralizelisttitles = false
 
 [params]
-mainSections = ["posts"] # Sections to include in lists and indexes
-copyrightYear = 2017 # Footer copyright start year, prepended to current year, e.g., 2000-2020
-# Posts Date format
-# Go Reference time: Mon Jan 2 15:04:05 MST 2006
-dateFormat = "2006.01.02"
-# Chroma Syntax Highlighting
-# Options: dark, light, false
-highlight = "dark"
-disableThemeAttribution = true
+author = "Calin Tataru"
+description = "Personal blog theme powered by Hugo"
+githubUsername = "#"
+accent = "#3eccbf"
+showBorder = true
+backgroundColor = "white"
+font = "Raleway" # should match the name on Google Fonts!
+highlight = true
+highlightStyle = "default"
+highlightLanguages = ["javascript", "toml", "haskell", "kotlin", "scala", "swift"]
 
-# Max Width Page sections
-maxWidthTitle = "max-w-2xl"
-maxWidthFeature = "max-w-5xl"
-maxWidthContent = "max-w-2xl"
-
-# Max Width Template parts
-maxWidthHeader = "max-w-6xl"
-maxWidthFooter = "max-w-6xl"
-
-[params.brand]
-# domain = "up-tri.me"
-# email = "yaki-shake@up-tri.me"
-
-[params.social]
-# github = "https://github.com/up-tri"
-twitter = "https://twitter.com/magic4141"
-# footer = ["twitter", "github"]
-
-[params.logo]
-inline = false
-path = "images/icon.png"
-
-[taxonomies]
-tag = "tags"
-category = "categories"
-
-[menu]
 [[menu.main]]
-name = "プログラミング"
-url = "/programing/"
-weight = 2
+    url = "/"
+    name = "ホーム"
+    weight = 1
 
-[[menu.foot]]
-name = "プログラミング"
-url = "/programing/"
-weight = 2
+[[menu.main]]
+    url = "/programing/"
+    name = "プログラミング"
+    weight = 2
+
+[[menu.main]]
+    url = "/categories/"
+    name = "カテゴリ"
+    weight = 3
+
+[[menu.main]]
+    url = "/tags/"
+    name = "タグ"
+    weight = 4
+
+# [[menu.main]]
+#     url = "/series/"
+#     name = "シリーズ"
+#     weight = 5
+
+# Social icons to be shown on the right-hand side of the navigation bar.
+# The "name" field should match the name of the icon in Font Awesome.
+# The list of available icons can be found at http://fontawesome.io/icons.
+
+# [[menu.icon]]
+#     url = "mailto:me@example.com"
+#     name = "fas fa-envelope"
+#     weight = 1
+
+# [[menu.icon]]
+#     url = "https://github.com/username/"
+#     name = "fab fa-github"
+#     weight = 2
+
+# [[menu.icon]]
+#     url = "https://twitter.com/username/"
+#     name = "fab fa-twitter"
+#     weight = 3
+
+# [[menu.icon]]
+#     url = "https://www.linkedin.com/in/username/"
+#     name = "fab fa-linkedin"
+#     weight = 4
+
+# [[menu.icon]]
+#     url = "https://www.stackoverflow.com/username/"
+#     name = "fab fa-stack-overflow"
+#     weight = 5

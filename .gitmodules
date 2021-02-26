@@ -1,30 +1,6 @@
-[submodule "themes/axiom"]
-	path = themes/axiom
-	url = https://github.com/marketempower/axiom.git
 [submodule "themes/ananke"]
 	path = themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
-[submodule "themes/liva"]
-	path = themes/liva
-	url = https://github.com/gethugothemes/liva-hugo.git
-[submodule "themes/m10c"]
-	path = themes/m10c
-	url = https://github.com/vaga/hugo-theme-m10c.git
-[submodule "themes/cleanwhite"]
-	path = themes/cleanwhite
-	url = https://github.com/zhaohuabing/hugo-theme-cleanwhite.git
-[submodule "themes/uno"]
-	path = themes/uno
-	url = https://github.com/SenjinDarashiva/hugo-uno.git
-[submodule "themes/airspace"]
-	path = themes/airspace
-	url = https://github.com/themefisher/airspace-hugo.git
-[submodule "themes/mainroad"]
-	path = themes/mainroad
-	url = https://github.com/vimux/mainroad
-[submodule "themes/dot"]
-	path = themes/dot
-	url = https://github.com/themefisher/dot-hugo-documentation-theme.git
 [submodule "themes/minimal"]
 	path = themes/minimal
 	url = https://github.com/calintat/minimal.git
