@@ -1,24 +1,28 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        
 
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Programings</title>
         
-        <style>
+        
 
-    html body {
-        font-family: 'Raleway', sans-serif;
-        background-color: white;
+<style>
+    *,::after,::before{box-sizing:border-box}html{line-sizing:normal}body{margin:0}h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.17rem}h4{font-size:1rem}h5{font-size:.83rem}h6{font-size:.67rem}h1{margin:.67em 0}pre{white-space:pre-wrap}hr{border-style:solid;border-width:1px 0 0;color:inherit;height:0;overflow:visible}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle;max-width:100%}canvas,img,svg,video{height:auto}audio{width:100%}img{border-style:none}svg{overflow:hidden}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}
+</style>
+
+
+<style>
+    * {
+        font-family: 'Noto Serif JP', serif;
     }
 
     :root {
         --accent: #3eccbf;
-        --border-width:  5px ;
+        --secondary: #3e3e3e;
+        --border-width:  2px ;
     }
-
 </style>
 
 
@@ -28,31 +32,21 @@
 
 
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="preconnect" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;JP:wght@200;700&amp;display=swap">
 
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
+
+        
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/toml.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
     
     <script>hljs.initHighlightingOnLoad();</script>
 
@@ -61,67 +55,36 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.79.0" />
+
+        <meta name="generator" content="Hugo 0.79.0" />
         
-            <link href="https://peperon4141.github.io/life_hack/programing/index.xml" rel="alternate" type="application/rss&#43;xml" title="東京ライフハッカー" />
-            <link href="https://peperon4141.github.io/life_hack/programing/index.xml" rel="feed" type="application/rss&#43;xml" title="東京ライフハッカー" />
+            <link href="https://peperon4141.github.io/life_hack/programing/index.xml" rel="alternate" type="application/rss&#43;xml" title="東京のほほんライフハック" />
+            <link href="https://peperon4141.github.io/life_hack/programing/index.xml" rel="feed" type="application/rss&#43;xml" title="東京のほほんライフハック" />
         
 
         
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
     </head>
 
     <body>
-        
+        <header>
+            <nav>
+    <a href="https://peperon4141.github.io/life_hack/">
+        <img class="logo" src="https://peperon4141.github.io/life_hack/images/icon.png" alt="">
+    </a>
+    <ul class="menu">
+        <li><a href="https://peperon4141.github.io/life_hack/programing/">プログラミング</a></li><li><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a></li><li><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a></li><li><a href="https://peperon4141.github.io/life_hack/series/">シリーズ</a></li>
+    </ul>
+    
+</nav>
+        </header>
 
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Programings</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="https://peperon4141.github.io/life_hack/">ホーム</a></li>
-                            
-                                <li><a href="https://peperon4141.github.io/life_hack/programing/">プログラミング</a></li>
-                            
-                                <li><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a></li>
-                            
-                                <li><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a></li>
-                            
-                        </ul>
-                    
-                    
-                </div>
-            </div>
-        </nav>
+<main class="list" style="width: 100%; margin: 24px;">
 
-
-<main>
-
-    <h2>Programings</h2>
-
-     <div class="item">
+    <article>
+        <h1>Programings</h2>
+    
+         <div class="item">
 
     
     
@@ -130,10 +93,10 @@
     
     
 
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-layout/">HugoのLayoutについて理解する</a></h4>
-    <h5>February 23, 2021</h5>
+    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-toml/">HugoのTomlの書き方</a></h4>
+    <h5>February 26, 2021</h5>
     
-<a href="https://peperon4141.github.io/life_hack/tags/hugo"><kbd class="item-tag">hugo</kbd></a>
+<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
 
 
 
@@ -147,10 +110,27 @@
     
     
 
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-taxonomy/">Hugoで記事を分類する！タクソノミー</a></h4>
-    <h5>February 14, 2021</h5>
+    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-syntax/">Hugoの文法を理解する</a></h4>
+    <h5>February 26, 2021</h5>
     
-<a href="https://peperon4141.github.io/life_hack/tags/hugo"><kbd class="item-tag">hugo</kbd></a>
+<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-layout/">HugoのLayoutについて理解する</a></h4>
+    <h5>February 23, 2021</h5>
+    
+<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
 
 
 
@@ -167,7 +147,7 @@
     <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-directorystructure/">Hugoのディレクトリ構造を理解する</a></h4>
     <h5>February 14, 2021</h5>
     
-<a href="https://peperon4141.github.io/life_hack/tags/hugo"><kbd class="item-tag">hugo</kbd></a>
+<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
 
 
 
@@ -181,26 +161,38 @@
     
     
 
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-markdownsamples/">Markdown記法一覧</a></h4>
+    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-taxonomy/">Hugoの記事をタクソノミーで分類する</a></h4>
     <h5>February 14, 2021</h5>
     
-<a href="https://peperon4141.github.io/life_hack/tags/hugo"><kbd class="item-tag">hugo</kbd></a>
+<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
 
 
 
 </div>
  
+    </article>
 
 </main>
 
 
 
+<div class="pages">
+
+    
+
+    
+        <a class="icon pages-icon" href="https://peperon4141.github.io/life_hack/programing/page/2/" rel="next">
+            <i class="fa fa-arrow-right"></i>
+        </a>
+    
+
+</div>
+
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+            <p class="copyright">© All rights reserved. Powered by トール.</p>
         </footer>
-
-        
-
         
     </body>
 

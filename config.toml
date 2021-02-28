@@ -1,27 +1,38 @@
-# baseURL = "http://example.com/"
-languageCode = "en-us"
-title = "東京ライフハッカー"
-theme = "minimal"
+languageCode = "ja-jp"
+title = "東京のほほんライフハック"
+theme = "original"
 # disqusShortname = "username" # delete this to disable disqus comments
 googleAnalytics = ""
 publishDir = "docs" # ビルド時の出力ディレクトリ
 
 [params]
 author = "Calin Tataru"
-description = "Personal blog theme powered by Hugo"
+description = "世田谷ぐらしのITエンジニアのメモ"
 githubUsername = "#"
-accent = "#3eccbf"
-showBorder = true
-backgroundColor = "white"
-font = "Raleway" # should match the name on Google Fonts!
+
+# デザインを指定
+accent = "#3eccbf" # アクセントの色
+showBorder = true # 上下にボーダーカラーを表示するかどうか
+
 highlight = true
 highlightStyle = "default"
-highlightLanguages = ["javascript", "toml", "haskell", "kotlin", "scala", "swift"]
+highlightLanguages = ["javascript", "toml"]
 
-[[menu.main]]
-    url = "/"
-    name = "ホーム"
-    weight = 1
+fontCss = "Noto Serif JP"
+fontLink = "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;700&display=swap" # should match the name on Google Fonts!
+
+# profileImage = "images/profile.jpg"
+
+icon = "images/icon.png"
+
+topImage = "images/tokyo.jpg"
+
+copyright = "&copy; All rights reserved. Powered by トール."
+
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
 
 [[menu.main]]
     url = "/programing/"
@@ -38,10 +49,10 @@ highlightLanguages = ["javascript", "toml", "haskell", "kotlin", "scala", "swift
     name = "タグ"
     weight = 4
 
-# [[menu.main]]
-#     url = "/series/"
-#     name = "シリーズ"
-#     weight = 5
+[[menu.main]]
+    url = "/series/"
+    name = "シリーズ"
+    weight = 5
 
 # Social icons to be shown on the right-hand side of the navigation bar.
 # The "name" field should match the name of the icon in Font Awesome.

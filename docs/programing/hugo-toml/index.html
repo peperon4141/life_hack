@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>hugo</title>
+        <title>HugoのTomlの書き方</title>
         
         
 
@@ -59,9 +59,6 @@
 
         <meta name="generator" content="Hugo 0.79.0" />
         
-            <link href="https://peperon4141.github.io/life_hack/tags/hugo/index.xml" rel="alternate" type="application/rss&#43;xml" title="東京のほほんライフハック" />
-            <link href="https://peperon4141.github.io/life_hack/tags/hugo/index.xml" rel="feed" type="application/rss&#43;xml" title="東京のほほんライフハック" />
-        
 
         
     </head>
@@ -79,114 +76,81 @@
 </nav>
         </header>
 
-<main class="list" style="width: 100%; margin: 24px;">
-
+<ol class="breadcrumb">
+  <li><a href="https://peperon4141.github.io/life_hack/">世田谷暮らし歴2年のWEB系エンジニアのライフハック術を紹介</a>
+  <li><a href="https://peperon4141.github.io/life_hack/programing/">Programings</a>
+  <li>HugoのTomlの書き方
+</ol>
+<main>
     <article>
-        <h1>hugo</h2>
-    
-         <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-toml/">HugoのTomlの書き方</a></h4>
-    <h5>February 26, 2021</h5>
-    
+        <h1>HugoのTomlの書き方</h1>
+        <h5></h5>
+        <li style="list-style: none;">
 <a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
 
+</li>
+        <div class="content"><p>TOMLの記法についてまとめます。</p>
+<h2 id="tomlとは">TOMLとは</h2>
+<p>TOMLとは、設定ファイルを記述するための言語です。
+明瞭な文法のため、人間に読みやすくなっています。</p>
+<h2 id="コメント">コメント</h2>
+<p>コメントは <code>#</code> から改行までがコメントになります。</p>
+<pre><code># これはコメント
+key = &quot;value&quot; # ここもコメント
+</code></pre><h2 id="型を表現">型を表現</h2>
+<pre><code>key1 = &quot;文字列&quot;
+key2 = &quot;文字列\&quot;エスケープ&quot; # エスケープでダブルコーテーションを入れられる
+key3 = &quot;&quot;&quot;
+複数行文字列
+&quot;&quot;&quot;
 
+key4 = 1 # 整数
+key5 = 2.1 # 少数
 
-</div>
-  <div class="item">
+key6 = true # ブーリアン
+key7 = false # ブーリアン
 
-    
-    
-    
+key8 = 1979-05-27T07:32:00Z # 日付
 
-    
-    
+key9 = [1, 2, 3] # 配列
+</code></pre><h2 id="テーブル">テーブル</h2>
+<p><code>[テーブル名]</code>でテーブルを定義できます。</p>
+<pre><code>[table]
+key1 = &quot;value1&quot;
 
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-syntax/">Hugoの文法を理解する</a></h4>
-    <h5>February 26, 2021</h5>
-    
-<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
+[foo.bar]
+key2 = &quot;value2&quot;
+</code></pre><p>これをJSONに変換すると以下のようになります。</p>
+<pre><code>{
+  &quot;table&quot;: {
+    &quot;key1&quot;: &quot;value1&quot;
+  },
+  &quot;foo&quot;: {
+    &quot;bar&quot;: {
+      &quot;key2&quot;: &quot;value2&quot;
+    }
+  }
+</code></pre><h2 id="テーブルの配列">テーブルの配列</h2>
+<p>テーブル名を<code>[[テーブル名]]</code>のように、２つの括弧で囲むことで、テーブルも配列を定義できます。</p>
+<pre><code>[[array]]
+key3 = &quot;value3&quot;
 
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-layout/">HugoのLayoutについて理解する</a></h4>
-    <h5>February 23, 2021</h5>
-    
-<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-directorystructure/">Hugoのディレクトリ構造を理解する</a></h4>
-    <h5>February 14, 2021</h5>
-    
-<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-taxonomy/">Hugoの記事をタクソノミーで分類する</a></h4>
-    <h5>February 14, 2021</h5>
-    
-<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
-
-
-
-</div>
- 
+[[array]]
+key4 = &quot;value4&quot;
+</code></pre><p>これをJSONに変換すると以下のようになります。</p>
+<pre><code>{
+  &quot;array&quot;: [
+    {
+      &quot;key3&quot;: &quot;value3&quot;
+    },
+    {
+      &quot;key4&quot;: &quot;value4&quot;
+    }
+  ]
+}
+</code></pre></div>
     </article>
-
 </main>
-
-
-
-<div class="pages">
-
-    
-
-    
-        <a class="icon pages-icon" href="https://peperon4141.github.io/life_hack/tags/hugo/page/2/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
 
 
 

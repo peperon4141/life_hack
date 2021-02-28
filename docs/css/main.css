@@ -1,77 +1,162 @@
 html, body {
     height: 100%;
+    font-size: 62.5%;
+    background-color: #f6f6f4;
 }
 
 body {
-    padding-top: 55px;
     display: flex;
-    text-align: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
 }
 
+header {
+    width: 100%;
+}
 main {
-    margin: auto;
-    padding: 25px;
-    flex: 1 0 auto;
-    max-width: 750px;
+    width:70%;
+}
+aside {
+    width:30%;
+}
+footer {
+    width: 100%;
+}
+/*500pxより小さくなったら1カラム表示*/
+@media (max-width:500px) {
+    header, main, aside, footer {
+        width:100%;
+    }
 }
 
 img {
     max-width: 100%;
 }
+h1 {
+    font-size: 5vh;
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
+}
+h2 {
+    margin: 8px 0;
+    padding-left: 8px;
+    border-left: 2px solid var(--accent);
+}
 
-/* Homepage */
+/* Navigation */
+header {
+    border-top: var(--border-width) solid var(--accent);
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    background-color: var(--secondary);
+}
+img.logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+header nav ul.menu {
+    list-style: none;
+}
+header nav ul.menu li {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 1vh;
+    font-weight: bold;
+}
+
+/* header nav ul.hamburger { 
+    flex-direction: column;
+    position: fixed;
+    width: 200px;
+    top: 80px;
+    right: 16px;
+    background-color: #757575;
+} */
+
+/* header nav ul.hamburger li {
+    height: var(--nav-height);
+    line-height: var(--nav-height);
+    text-align: left;
+    width: 100%;
+    display: block;
+} */
+
+/* Footer */
+footer {
+    background-color: var(--secondary);
+    border-bottom: var(--border-width) solid var(--accent);
+    text-align: center;
+}
+
+/* Home page */
+main.home-page {
+    width: 100%;
+    padding: 12px;
+}
 
 .intro {
-    transform: translateY(22vh);
-}
-
-.intro > h1 {
-    color: #212121;
-    font-size: 12vh;
-}
-
-.intro > h2 {
-    color: #757575;
-    font-size: 3vmin;
+    position: relative;
+    width: 100%;
 }
 
 /* Page content */
+article {
+    margin: 16px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 4%);
+}
 
 .content {
-    padding-top: 20px;
+    padding-top: 24px;
 }
 
-/* Profile picture */
-
-.profile {
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
+/* Sidebar */
+aside {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 4%);
 }
 
-/* Colored links */
-
+/* links */
+a {
+    text-decoration: none;
+}
 a:link, a:visited {
     color: var(--accent);
 }
 
-a.icon:hover {
-    text-decoration: none;
-}
-
 a:hover {
-    color: var(--accent) !important;
+    font-weight: bold;
+    /* color: var(--accent) !important; */
 }
 
 /* Copyright message */
-
 .copyright {
     margin: 15px 0;
 }
 
 /* Paginator */
-
 .pages {
     padding: 15px 0;
 }
@@ -81,28 +166,27 @@ a:hover {
 }
 
 /* List item for posts/projects */
-
 .item {
     padding: 10px 0;
 }
 
-.item-tag {
+.tag {
+    text-decoration: none;
+    color: white !important;
     background-color: var(--accent);
+    padding: 4px;
+    border-radius: 2px;
 }
 
-/* Navigation icons */
-
-.navbar-icon {
-    font-size: 125%;
-    display: inline-block !important;
+/* breadcrumb */
+.breadcrumb {
+    padding: 0;
 }
-
-/* Colored borders at top/bottom of page */
-
-.navbar.navbar-default {
-    border-top: var(--border-width) solid var(--accent);
+.breadcrumb li {
+    display: inline;
+    list-style: none;
 }
-
-footer {
-    border-bottom: var(--border-width) solid var(--accent);
+.breadcrumb li:not(:last-child)::after {
+    content: '>';
+    padding: 0 0.5em;
 }

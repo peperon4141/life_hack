@@ -1,5 +1,5 @@
 ---
-title: "Hugoで記事を分類する！タクソノミー"
+title: "Hugoの記事をタクソノミーで分類する"
 date: 2021-02-14T09:27:35+09:00
 tags: ["hugo"]
 categories: ["hugo"]
@@ -9,13 +9,13 @@ description: ""
 ---
 Hugoを使って記事を分類してみます。
 
-## Hugoの記事の種類一覧
-| 種類 | 説明 | 例 |
-| :--- | :--- | :--- |
-| home | ホームページ | /index.html |
-| page | 投稿ページ | /posts/post_name/index.html |
-| section | セクションページ | /section_name/index.html |
-| taxonomy | 分類ページ | /tags/index.html <br> /categories/index.html |
+## Hugoのデフォルトでの記事の分類方法
+| 種類 | 説明 |
+| :--- | :--- |
+| section | ディレクトリで分類 例)/{section_name}/index.html |
+| tag | 記事にタグを付けて分類 |
+| category | 記事にカテゴリを付けて分類。カテゴリは階層化できる |
+| series | シリーズ物の記事を作れる |
 
 ## Hugoで記事を分類する方法一覧
 Hugoで記事を分類する方法は複数あります。

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programings on 東京のほほんライフハック</title>
-    <link>https://peperon4141.github.io/life_hack/programing/</link>
-    <description>Recent content in Programings on 東京のほほんライフハック</description>
+    <title>hugo on 東京のほほんライフハック</title>
+    <link>https://peperon4141.github.io/life_hack/series/hugo/</link>
+    <description>Recent content in hugo on 東京のほほんライフハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 26 Feb 2021 11:35:35 +0900</lastBuildDate><atom:link href="https://peperon4141.github.io/life_hack/programing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Feb 2021 11:35:35 +0900</lastBuildDate><atom:link href="https://peperon4141.github.io/life_hack/series/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HugoのTomlの書き方</title>
       <link>https://peperon4141.github.io/life_hack/programing/hugo-toml/</link>

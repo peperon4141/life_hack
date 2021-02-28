@@ -4,31 +4,51 @@
   
   <url>
     <loc>https://peperon4141.github.io/life_hack/categories/</loc>
-    <lastmod>2021-02-23T00:00:00+09:00</lastmod>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://peperon4141.github.io/life_hack/tags/hugo/</loc>
-    <lastmod>2021-02-23T00:00:00+09:00</lastmod>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://peperon4141.github.io/life_hack/series/hugo/</loc>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://peperon4141.github.io/life_hack/categories/hugo/</loc>
-    <lastmod>2021-02-23T00:00:00+09:00</lastmod>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-layout/</loc>
-    <lastmod>2021-02-23T00:00:00+09:00</lastmod>
+    <loc>https://peperon4141.github.io/life_hack/programing/hugo-toml/</loc>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://peperon4141.github.io/life_hack/programing/</loc>
-    <lastmod>2021-02-23T00:00:00+09:00</lastmod>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://peperon4141.github.io/life_hack/series/</loc>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://peperon4141.github.io/life_hack/tags/</loc>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://peperon4141.github.io/life_hack/programing/hugo-syntax/</loc>
+    <lastmod>2021-02-26T11:27:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://peperon4141.github.io/life_hack/programing/hugo-layout/</loc>
     <lastmod>2021-02-23T00:00:00+09:00</lastmod>
   </url>
   
@@ -38,12 +58,12 @@
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-taxonomy/</loc>
+    <loc>https://peperon4141.github.io/life_hack/programing/hugo-directorystructure/</loc>
     <lastmod>2021-02-14T09:27:35+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-directorystructure/</loc>
+    <loc>https://peperon4141.github.io/life_hack/programing/hugo-taxonomy/</loc>
     <lastmod>2021-02-14T09:27:35+09:00</lastmod>
   </url>
   

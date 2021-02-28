@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>hugo</title>
+        <title>Hugoの文法を理解する</title>
         
         
 
@@ -59,9 +59,6 @@
 
         <meta name="generator" content="Hugo 0.79.0" />
         
-            <link href="https://peperon4141.github.io/life_hack/tags/hugo/index.xml" rel="alternate" type="application/rss&#43;xml" title="東京のほほんライフハック" />
-            <link href="https://peperon4141.github.io/life_hack/tags/hugo/index.xml" rel="feed" type="application/rss&#43;xml" title="東京のほほんライフハック" />
-        
 
         
     </head>
@@ -79,114 +76,35 @@
 </nav>
         </header>
 
-<main class="list" style="width: 100%; margin: 24px;">
-
+<ol class="breadcrumb">
+  <li><a href="https://peperon4141.github.io/life_hack/">世田谷暮らし歴2年のWEB系エンジニアのライフハック術を紹介</a>
+  <li><a href="https://peperon4141.github.io/life_hack/programing/">Programings</a>
+  <li>Hugoの文法を理解する
+</ol>
+<main>
     <article>
-        <h1>hugo</h2>
-    
-         <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-toml/">HugoのTomlの書き方</a></h4>
-    <h5>February 26, 2021</h5>
-    
+        <h1>Hugoの文法を理解する</h1>
+        <h5></h5>
+        <li style="list-style: none;">
 <a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
 
-
-
+</li>
+        <div class="content"><p>Hugoのテーマを自作やカスタマイズするにあたり、必要そうな文法をまとめます。</p>
+<h2 id="変数">変数</h2>
+<p>{{ foo }}
+{{ $repoHost := default &ldquo;github&rdquo; $.Params.repoHost }}</p>
+<h2 id="partial">partial</h2>
+<pre><code>{{ partial &quot;header&quot; . }}
+</code></pre><h2 id="range-end">range end</h2>
+<pre><code>{{ partial &quot;header&quot; . }}
+</code></pre><h2 id="dot">Dot</h2>
+<p>{{ .Title }}</p>
+<h2 id="if">if</h2>
+<h2 id="with">With</h2>
+<h2 id="ショートコード">ショートコード</h2>
 </div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-syntax/">Hugoの文法を理解する</a></h4>
-    <h5>February 26, 2021</h5>
-    
-<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-layout/">HugoのLayoutについて理解する</a></h4>
-    <h5>February 23, 2021</h5>
-    
-<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-directorystructure/">Hugoのディレクトリ構造を理解する</a></h4>
-    <h5>February 14, 2021</h5>
-    
-<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="https://peperon4141.github.io/life_hack/programing/hugo-taxonomy/">Hugoの記事をタクソノミーで分類する</a></h4>
-    <h5>February 14, 2021</h5>
-    
-<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo</a>
-
-
-
-</div>
- 
     </article>
-
 </main>
-
-
-
-<div class="pages">
-
-    
-
-    
-        <a class="icon pages-icon" href="https://peperon4141.github.io/life_hack/tags/hugo/page/2/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
 
 
 
