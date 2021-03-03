@@ -65,16 +65,15 @@
 
     <body>
         <header>
-            <nav>
-    <a href="https://peperon4141.github.io/life_hack/">
-        <img class="logo" src="https://peperon4141.github.io/life_hack/images/icon.png" alt="">
-    </a>
-    <ul class="menu">
-        <li><a href="https://peperon4141.github.io/life_hack/programing/">プログラミング</a></li><li><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a></li><li><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a></li><li><a href="https://peperon4141.github.io/life_hack/series/">シリーズ</a></li>
-    </ul>
-    
-</nav>
+            <a class="logo" href="https://peperon4141.github.io/life_hack/">
+                <img  src="https://peperon4141.github.io/life_hack/images/icon.png" alt="">
+            </a>
+            <span>東京のほほんライフハック</span>
+            
         </header>
+<nav>
+    <div><a href="https://peperon4141.github.io/life_hack/programing/">プログラミング</a></div><div><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a></div><div><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a></div><div><a href="https://peperon4141.github.io/life_hack/series/">シリーズ</a></div>
+</nav>
 
 <ol class="breadcrumb">
   <li><a href="https://peperon4141.github.io/life_hack/">世田谷暮らし歴2年のWEB系エンジニアのライフハック術を紹介</a>
@@ -91,8 +90,34 @@
 </li>
         <div class="content"><p>Hugoのテーマを自作やカスタマイズするにあたり、必要そうな文法をまとめます。</p>
 <h2 id="変数">変数</h2>
-<p>{{ foo }}
-{{ $repoHost := default &ldquo;github&rdquo; $.Params.repoHost }}</p>
+<p>変数の定義は、変数名に <code>$</code> を付け、 <code>:=</code> で代入します。</p>
+<pre><code>{{ $変数名 := 値 }}
+</code></pre><p>参照するときは、 <code>$変数名</code> とします。</p>
+<pre><code>&lt;p&gt;{{ $x }}&lt;/p&gt;
+</code></pre><p>例）</p>
+<pre><code>{{ $hello := &quot;Hello&quot; }}
+&lt;p&gt;{{ $hello }}&lt;/p&gt;
+</code></pre><p>↓</p>
+<pre><code>&lt;p&gt;Hello&lt;/p&gt;
+</code></pre><h2 id="パイプ">パイプ</h2>
+<p><code>|</code> を使うことで、</p>
+<pre><code>{{ $hello := &quot;HUGO&quot; | printf &quot;%s World!&quot; | printf &quot;Hello %s.&quot; }}
+&lt;p&gt;{{ $hello }}&lt;/p&gt;
+</code></pre><p>↓</p>
+<pre><code>Hello HUGO World!
+</code></pre><h2 id="range">range</h2>
+<p>変数をループ処理できます。</p>
+<pre><code>&lt;ul&gt;
+  {{ range $page := .Site.AllPages }}
+    &lt;li&gt;&lt;a href=&quot;{{ $page.RelPermalink }}&quot;&gt;{{ $page.Title }}&lt;/a&gt;
+  {{ end }}
+&lt;/ul&gt;
+</code></pre><h2 id="with">With</h2>
+<p>変数にアクセスできるスコープを限定できます。</p>
+<pre><code>{{ with $hello := &quot;HUGO&quot; }}
+  Hello {{ $hello }}
+{{ end }}
+</code></pre><p><code>end</code> 以降は変数にアクセスできません。</p>
 <h2 id="partial">partial</h2>
 <pre><code>{{ partial &quot;header&quot; . }}
 </code></pre><h2 id="range-end">range end</h2>
@@ -100,13 +125,35 @@
 </code></pre><h2 id="dot">Dot</h2>
 <p>{{ .Title }}</p>
 <h2 id="if">if</h2>
-<h2 id="with">With</h2>
+<h2 id="with-1">With</h2>
 <h2 id="ショートコード">ショートコード</h2>
 </div>
     </article>
 </main>
 
-
+<aside>
+    
+    <div class="block categories">
+        <h2>カテゴリ</h2>
+        
+        <ul>
+            
+            <li><a href="https://peperon4141.github.io/life_hack/categories/hugo">hugo<span>(6)</span></a></li>
+            
+        </ul>
+        
+    </div>
+    <div class="block tags">
+        <h2>タグ</h2>
+        
+        <ul>
+            
+            <li><a href="https://peperon4141.github.io/life_hack/tags/hugo">hugo<span>(6)</span></a></li>
+            
+        </ul>
+        
+    </div>
+</aside>
 
         <footer>
             <p class="copyright">© All rights reserved. Powered by トール.</p>

@@ -27,9 +27,14 @@ TOMLとは TOMLとは、設定ファイルを記述するための言語です�
       
       <guid>https://peperon4141.github.io/life_hack/programing/hugo-syntax/</guid>
       <description>Hugoのテーマを自作やカスタマイズするにあたり、必要そうな文法をまとめます。
-変数 {{ foo }} {{ $repoHost := default &amp;ldquo;github&amp;rdquo; $.Params.repoHost }}
-partial {{ partial &amp;quot;header&amp;quot; . }} range end {{ partial &amp;quot;header&amp;quot; . }} Dot {{ .Title }}
-if With ショートコード </description>
+変数 変数の定義は、変数名に $ を付け、 := で代入します。
+{{ $変数名 := 値 }} 参照するときは、 $変数名 とします。
+&amp;lt;p&amp;gt;{{ $x }}&amp;lt;/p&amp;gt; 例）
+{{ $hello := &amp;quot;Hello&amp;quot; }} &amp;lt;p&amp;gt;{{ $hello }}&amp;lt;/p&amp;gt; ↓
+&amp;lt;p&amp;gt;Hello&amp;lt;/p&amp;gt; パイプ | を使うことで、
+{{ $hello := &amp;quot;HUGO&amp;quot; | printf &amp;quot;%s World!&amp;quot; | printf &amp;quot;Hello %s.&amp;quot; }} &amp;lt;p&amp;gt;{{ $hello }}&amp;lt;/p&amp;gt; ↓
+Hello HUGO World! range 変数をループ処理できます。
+&amp;lt;ul&amp;gt; {{ range $page := .Site.AllPages }} &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;{{ $page.RelPermalink }}&amp;quot;&amp;gt;{{ $page.Title }}&amp;lt;/a&amp;gt; {{ end }} &amp;lt;/ul&amp;gt; With 変数にアクセスできるスコープを限定できます。</description>
     </item>
     
     <item>
