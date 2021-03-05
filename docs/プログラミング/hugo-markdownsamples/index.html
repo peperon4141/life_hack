@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Markdown記法一覧</title>
+        
+        
+
+<style>
+    *,::after,::before{box-sizing:border-box}html{line-sizing:normal}body{margin:0}h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.17rem}h4{font-size:1rem}h5{font-size:.83rem}h6{font-size:.67rem}h1{margin:.67em 0}pre{white-space:pre-wrap}hr{border-style:solid;border-width:1px 0 0;color:inherit;height:0;overflow:visible}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle;max-width:100%}canvas,img,svg,video{height:auto}audio{width:100%}img{border-style:none}svg{overflow:hidden}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}
+</style>
+
+
+<style>
+    * {
+        font-family: 'Noto Serif JP', serif;
+    }
+
+    :root {
+        --accent: #3eccbf;
+        --secondary: #3e3e3e;
+        --border-width:  2px ;
+    }
+</style>
+
+
+<link rel="stylesheet" href="https://peperon4141.github.io/life_hack/css/main.css">
+
+
+
+
+
+<link rel="preconnect" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;JP:wght@200;700&amp;display=swap">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/toml.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+        <meta name="generator" content="Hugo 0.79.0" />
+        
+
+        
+    </head>
+
+    <body>
+        <header>
+            <a class="logo" href="https://peperon4141.github.io/life_hack/">
+                <img  src="https://peperon4141.github.io/life_hack/images/icon.png" alt="">
+            </a>
+            <span>東京のほほんライフハック</span>
+            
+        </header>
+<nav>
+    <div class="nav-wrap">
+        <a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミング</a><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a><a href="https://peperon4141.github.io/life_hack/series/">シリーズ</a>
+    </div>
+</nav>
+
+
+<ol class="breadcrumb">
+  <li><a href="https://peperon4141.github.io/life_hack/">ホーム</a>
+  <li><a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミングs</a>
+  <li>Markdown記法一覧
+</ol>
+<main>
+    <article>
+        <h1>Markdown記法一覧</h1>
+        <h5></h5>
+        <li style="list-style: none;">
+<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">
+  <i class="fa fa-tag"></i><span>hugo</span>
+</a>
+
+</li>
+        <div class="content"><h2 id="改行">改行</h2>
+<pre><code>&lt;br&gt; or スペース2つ
+</code></pre><hr>
+<h2 id="見出し">見出し</h2>
+<pre><code># 見出し1
+## 見出し2
+### 見出し3
+</code></pre><p>↓</p>
+<h1 id="見出し1">見出し1</h1>
+<h2 id="見出し2">見出し2</h2>
+<h3 id="見出し3">見出し3</h3>
+<h4 id="見出し4">見出し4</h4>
+<h5 id="見出し5">見出し5</h5>
+<hr>
+<h2 id="番号リスト">番号リスト</h2>
+<pre><code>1. 番号リスト1
+2. 番号リスト2
+</code></pre><p>↓</p>
+<ol>
+<li>番号リスト1</li>
+<li>番号リスト2</li>
+</ol>
+<hr>
+<h2 id="リスト">リスト</h2>
+<pre><code>- リスト1
+- リスト2
+</code></pre><p>↓</p>
+<ul>
+<li>リスト1</li>
+<li>リスト2</li>
+</ul>
+<hr>
+<h2 id="インライン">インライン</h2>
+<pre><code>`インライン`
+</code></pre><p>↓<br>
+<code>インライン</code></p>
+<hr>
+<h2 id="コード">コード</h2>
+<p>``` で囲む</p>
+<hr>
+<h2 id="リンク">リンク</h2>
+<pre><code>[リンク](https://example.com/)
+[リンク](https://example.com/ &quot;タイトル&quot;)
+</code></pre><p>↓<br>
+<a href="https://example.com/">リンク</a>
+<a href="https://example.com/" title="タイトル">リンク</a></p>
+<hr>
+<h2 id="画像">画像</h2>
+<pre><code>![代替えテキスト](/images/icon.png)
+![代替えテキスト](/images/icon.png &quot;タイトル&quot;)
+</code></pre><hr>
+<h2 id="太字">太字</h2>
+<pre><code>**太字**
+</code></pre><p>↓<br>
+<strong>太字</strong></p>
+<hr>
+<h2 id="打ち消し線">打ち消し線</h2>
+<pre><code>~~打ち消し線~~
+</code></pre><p>↓<br>
+<del>打ち消し線</del></p>
+<hr>
+<h2 id="引用">引用</h2>
+<pre><code>&gt; 引用1
+&gt;&gt; 引用2
+</code></pre><p>↓</p>
+<blockquote>
+<p>引用1</p>
+<blockquote>
+<p>引用2</p>
+</blockquote>
+</blockquote>
+<hr>
+<p><em>テキスト</em></p>
+<hr>
+<h2 id="水平線">水平線</h2>
+<pre><code>*** or ---
+</code></pre></div>
+    </article>
+    <aside>
+    <div class="aside-wrapper">
+        
+        <div class="block categories">
+            <h2>カテゴリ</h2>
+            
+            <ul>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/categories/hugo">hugo<span>(6)</span></a></li>
+                
+            </ul>
+            
+        </div>
+        <div class="block tags">
+            <h2>タグ</h2>
+            
+            <ul>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/tags/hugo">hugo<span>(6)</span></a></li>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/tags/layout">layout<span>(1)</span></a></li>
+                
+            </ul>
+            
+        </div>
+    </div>
+</aside>
+</main>
+
+        <footer>
+            <p class="copyright">© All rights reserved. Powered by トール.</p>
+        </footer>
+        
+    </body>
+
+</html>
+

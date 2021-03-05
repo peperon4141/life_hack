@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hugoのディレクトリ構造を理解する</title>
+        
+        
+
+<style>
+    *,::after,::before{box-sizing:border-box}html{line-sizing:normal}body{margin:0}h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.17rem}h4{font-size:1rem}h5{font-size:.83rem}h6{font-size:.67rem}h1{margin:.67em 0}pre{white-space:pre-wrap}hr{border-style:solid;border-width:1px 0 0;color:inherit;height:0;overflow:visible}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle;max-width:100%}canvas,img,svg,video{height:auto}audio{width:100%}img{border-style:none}svg{overflow:hidden}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}
+</style>
+
+
+<style>
+    * {
+        font-family: 'Noto Serif JP', serif;
+    }
+
+    :root {
+        --accent: #3eccbf;
+        --secondary: #3e3e3e;
+        --border-width:  2px ;
+    }
+</style>
+
+
+<link rel="stylesheet" href="https://peperon4141.github.io/life_hack/css/main.css">
+
+
+
+
+
+<link rel="preconnect" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;JP:wght@200;700&amp;display=swap">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/toml.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+        <meta name="generator" content="Hugo 0.79.0" />
+        
+
+        
+    </head>
+
+    <body>
+        <header>
+            <a class="logo" href="https://peperon4141.github.io/life_hack/">
+                <img  src="https://peperon4141.github.io/life_hack/images/icon.png" alt="">
+            </a>
+            <span>東京のほほんライフハック</span>
+            
+        </header>
+<nav>
+    <div class="nav-wrap">
+        <a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミング</a><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a><a href="https://peperon4141.github.io/life_hack/series/">シリーズ</a>
+    </div>
+</nav>
+
+
+<ol class="breadcrumb">
+  <li><a href="https://peperon4141.github.io/life_hack/">ホーム</a>
+  <li><a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミングs</a>
+  <li>Hugoのディレクトリ構造を理解する
+</ol>
+<main>
+    <article>
+        <h1>Hugoのディレクトリ構造を理解する</h1>
+        <h5>Hugoで生成されるディレクトリと各用途を解説</h5>
+        <li style="list-style: none;">
+<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">
+  <i class="fa fa-tag"></i><span>Hugo</span>
+</a>
+
+</li>
+        <div class="content"><h2 id="hugoで生成される構造">Hugoで生成される構造</h2>
+<pre><code>.
+├── config.toml
+├── archetypes
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre><p>参照: <a href="https://gohugo.io/getting-started/directory-structure/">Directory Structure</a></p>
+<h2 id="configtoml">config.toml</h2>
+<p>Hugoの設定を記述します。</p>
+<p>環境毎に設定を変更したい場合は、configディレクトリが有効です。（configディレクトリはデフォルトでは作成されない）<br>
+configディレクトリを使用することで、環境ごとの追加設定を定義することもできます。</p>
+<h2 id="archetypes">archetypes</h2>
+<p>新しいコンテンツを追加する際のテンプレートを定義できます。<br>
+参照: <a href="https://gohugo.io/content-management/archetypes/">Archetypes</a></p>
+<h2 id="content">content</h2>
+<p>記事を入れるディレクトリです。<br>
+このディレクトリ構造はそのまま記事のURLになります。<br>
+それぞれのディレクトリは、セクションとして扱われます。</p>
+<p>例えば、 <code>blog</code> , <code>articles</code> , <code>tutorials</code> のように、記事をセクション分けしたい場合は、<br>
+<code>content/blog</code> , <code>content/articles</code> , <code>content/tutorials</code> のようにディレクトリを作るだけです。</p>
+<h2 id="data">data</h2>
+<p>設定ファイルを使用したい場合に、このディレクトリを使用できます。<br>
+YAML, JSON, TOMLなどのフォーマットで定義できます。</p>
+<p><a href="https://gohugo.io/templates/data-templates/">サンプル</a>はここにあります。</p>
+<h2 id="layouts">layouts</h2>
+<p>画像、CSS、JavaScriptなどのような、静的コンテンツ(動的に変わらないコンテンツ)を配置します。<br>
+サイトをビルドすると、staticディレクトリのコンテンツはそのままビルド結果にコピーされます。</p>
+<h2 id="resources">resources</h2>
+<p>このディレクトリはデフォルトでは作成されません。<br>
+キャッシュなどのスピードアップのためなどに使用されるディレクトリです。</p>
+</div>
+    </article>
+    <aside>
+    <div class="aside-wrapper">
+        
+        <div class="block categories">
+            <h2>カテゴリ</h2>
+            
+            <ul>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/categories/hugo">hugo<span>(6)</span></a></li>
+                
+            </ul>
+            
+        </div>
+        <div class="block tags">
+            <h2>タグ</h2>
+            
+            <ul>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/tags/hugo">hugo<span>(6)</span></a></li>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/tags/layout">layout<span>(1)</span></a></li>
+                
+            </ul>
+            
+        </div>
+    </div>
+</aside>
+</main>
+
+        <footer>
+            <p class="copyright">© All rights reserved. Powered by トール.</p>
+        </footer>
+        
+    </body>
+
+</html>
+

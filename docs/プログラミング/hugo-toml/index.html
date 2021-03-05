@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HugoのTomlの書き方</title>
+        
+        
+
+<style>
+    *,::after,::before{box-sizing:border-box}html{line-sizing:normal}body{margin:0}h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.17rem}h4{font-size:1rem}h5{font-size:.83rem}h6{font-size:.67rem}h1{margin:.67em 0}pre{white-space:pre-wrap}hr{border-style:solid;border-width:1px 0 0;color:inherit;height:0;overflow:visible}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle;max-width:100%}canvas,img,svg,video{height:auto}audio{width:100%}img{border-style:none}svg{overflow:hidden}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}
+</style>
+
+
+<style>
+    * {
+        font-family: 'Noto Serif JP', serif;
+    }
+
+    :root {
+        --accent: #3eccbf;
+        --secondary: #3e3e3e;
+        --border-width:  2px ;
+    }
+</style>
+
+
+<link rel="stylesheet" href="https://peperon4141.github.io/life_hack/css/main.css">
+
+
+
+
+
+<link rel="preconnect" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;JP:wght@200;700&amp;display=swap">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/toml.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+        <meta name="generator" content="Hugo 0.79.0" />
+        
+
+        
+    </head>
+
+    <body>
+        <header>
+            <a class="logo" href="https://peperon4141.github.io/life_hack/">
+                <img  src="https://peperon4141.github.io/life_hack/images/icon.png" alt="">
+            </a>
+            <span>東京のほほんライフハック</span>
+            
+        </header>
+<nav>
+    <div class="nav-wrap">
+        <a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミング</a><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a><a href="https://peperon4141.github.io/life_hack/series/">シリーズ</a>
+    </div>
+</nav>
+
+
+<ol class="breadcrumb">
+  <li><a href="https://peperon4141.github.io/life_hack/">ホーム</a>
+  <li><a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミングs</a>
+  <li>HugoのTomlの書き方
+</ol>
+<main>
+    <article>
+        <h1>HugoのTomlの書き方</h1>
+        <h5></h5>
+        <li style="list-style: none;">
+<a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">
+  <i class="fa fa-tag"></i><span>hugo</span>
+</a>
+
+</li>
+        <div class="content"><p>TOMLの記法についてまとめます。</p>
+<h2 id="tomlとは">TOMLとは</h2>
+<p>TOMLとは、設定ファイルを記述するための言語です。
+明瞭な文法のため、人間に読みやすくなっています。</p>
+<h2 id="コメント">コメント</h2>
+<p>コメントは <code>#</code> から改行までがコメントになります。</p>
+<pre><code># これはコメント
+key = &quot;value&quot; # ここもコメント
+</code></pre><h2 id="型を表現">型を表現</h2>
+<pre><code>key1 = &quot;文字列&quot;
+key2 = &quot;文字列\&quot;エスケープ&quot; # エスケープでダブルコーテーションを入れられる
+key3 = &quot;&quot;&quot;
+複数行文字列
+&quot;&quot;&quot;
+
+key4 = 1 # 整数
+key5 = 2.1 # 少数
+
+key6 = true # ブーリアン
+key7 = false # ブーリアン
+
+key8 = 1979-05-27T07:32:00Z # 日付
+
+key9 = [1, 2, 3] # 配列
+</code></pre><h2 id="テーブル">テーブル</h2>
+<p><code>[テーブル名]</code>でテーブルを定義できます。</p>
+<pre><code>[table]
+key1 = &quot;value1&quot;
+
+[foo.bar]
+key2 = &quot;value2&quot;
+</code></pre><p>これをJSONに変換すると以下のようになります。</p>
+<pre><code>{
+  &quot;table&quot;: {
+    &quot;key1&quot;: &quot;value1&quot;
+  },
+  &quot;foo&quot;: {
+    &quot;bar&quot;: {
+      &quot;key2&quot;: &quot;value2&quot;
+    }
+  }
+</code></pre><h2 id="テーブルの配列">テーブルの配列</h2>
+<p>テーブル名を<code>[[テーブル名]]</code>のように、２つの括弧で囲むことで、テーブルも配列を定義できます。</p>
+<pre><code>[[array]]
+key3 = &quot;value3&quot;
+
+[[array]]
+key4 = &quot;value4&quot;
+</code></pre><p>これをJSONに変換すると以下のようになります。</p>
+<pre><code>{
+  &quot;array&quot;: [
+    {
+      &quot;key3&quot;: &quot;value3&quot;
+    },
+    {
+      &quot;key4&quot;: &quot;value4&quot;
+    }
+  ]
+}
+</code></pre></div>
+    </article>
+    <aside>
+    <div class="aside-wrapper">
+        
+        <div class="block categories">
+            <h2>カテゴリ</h2>
+            
+            <ul>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/categories/hugo">hugo<span>(6)</span></a></li>
+                
+            </ul>
+            
+        </div>
+        <div class="block tags">
+            <h2>タグ</h2>
+            
+            <ul>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/tags/hugo">hugo<span>(6)</span></a></li>
+                
+                <li><a href="https://peperon4141.github.io/life_hack/tags/layout">layout<span>(1)</span></a></li>
+                
+            </ul>
+            
+        </div>
+    </div>
+</aside>
+</main>
+
+        <footer>
+            <p class="copyright">© All rights reserved. Powered by トール.</p>
+        </footer>
+        
+    </body>
+
+</html>
+

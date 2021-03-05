@@ -1,10 +1,10 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
+description: ""
+featured_image: ""
 date: {{ .Date }}
 tags: []
 categories: []
 series: []
-featured_image: ""
-description: ""
 draft: true
 ---

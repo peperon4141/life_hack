@@ -1,0 +1,19 @@
+<!-- 絞り込み結果ページ -->
+{{ partial "header" . }}
+{{ partial "navigation" . }}
+
+<main class="terms">
+    <article>
+        <div class="article-wrapper">
+            <h1>{{ .Title }}</h2>
+            <h5>{{ .Description }}</h5>
+            {{ range (.Paginator 5).Pages }}
+                {{ partial "list-item" . }}
+            {{ end }}
+            {{ partial "paginator" . }}
+        </div>
+    </article>
+    {{ partial "sidebar" . }}
+</main>
+
+{{ partial "footer" . }}

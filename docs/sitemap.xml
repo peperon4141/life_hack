@@ -23,12 +23,7 @@
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-toml/</loc>
-    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/</loc>
+    <loc>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-toml/</loc>
     <lastmod>2021-02-26T11:35:35+09:00</lastmod>
   </url>
   
@@ -43,12 +38,22 @@
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-syntax/</loc>
+    <loc>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
+    <lastmod>2021-02-26T11:35:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-syntax/</loc>
     <lastmod>2021-02-26T11:27:35+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-layout/</loc>
+    <loc>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</loc>
+    <lastmod>2021-02-23T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://peperon4141.github.io/life_hack/tags/layout/</loc>
     <lastmod>2021-02-23T00:00:00+09:00</lastmod>
   </url>
   
@@ -58,17 +63,17 @@
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-directorystructure/</loc>
+    <loc>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-directorystructure/</loc>
     <lastmod>2021-02-14T09:27:35+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-taxonomy/</loc>
+    <loc>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-taxonomy/</loc>
     <lastmod>2021-02-14T09:27:35+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://peperon4141.github.io/life_hack/programing/hugo-markdownsamples/</loc>
+    <loc>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-markdownsamples/</loc>
     <lastmod>2021-02-14T09:27:35+09:00</lastmod>
   </url>
   

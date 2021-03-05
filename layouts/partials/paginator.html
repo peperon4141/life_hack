@@ -1,0 +1,25 @@
+{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+
+<div class="paginator">
+    {{ if .Paginator.HasPrev }}
+        <a class="icon" href="{{ .Paginator.Prev.URL }}" rel="prev">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+    {{ else }}
+        <a class="icon" href="/" disabled="disabled" rel="prev">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+    {{ end }}
+
+    {{ if .Paginator.HasNext }}
+        <a class="icon" href="{{ .Paginator.Next.URL }}" rel="next">
+            <i class="fa fa-arrow-right"></i>
+        </a>
+    {{ else }}
+        <a class="icon" href="/" disabled="disabled" rel="prev">
+            <i class="fa fa-arrow-right"></i>
+        </a>
+    {{ end }}
+
+</div>
+{{ end }}

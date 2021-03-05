@@ -29,13 +29,16 @@ topImage = "images/tokyo.jpg"
 
 copyright = "&copy; All rights reserved. Powered by トール."
 
+# タイトルが自動で複数形になるのを防ぐ
+pluralizeListTitles = false
+
 [taxonomies]
     category = "categories"
     series = "series"
     tag = "tags"
 
 [[menu.main]]
-    url = "/programing/"
+    url = "/プログラミング/"
     name = "プログラミング"
     weight = 2
 

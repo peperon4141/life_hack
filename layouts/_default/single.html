@@ -1,0 +1,19 @@
+<!-- 投稿ページ -->
+{{ partial "header" . }}
+{{ partial "navigation" . }}
+
+<!-- パンくずリスト -->
+<ol class="breadcrumb">
+    {{- template "breadcrumb" (dict "node" . "start" .) }}
+</ol>
+<main>
+    <article>
+        <h1>{{ .Title }}</h1>
+        <h5>{{ .Description }}</h5>
+        <li style="list-style: none;">{{ partial "tags" . }}</li>
+        <div class="content">{{ .Content }}</div>
+    </article>
+    {{ partial "sidebar" . }}
+</main>
+
+{{ partial "footer" . }}
