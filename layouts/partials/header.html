@@ -24,21 +24,36 @@
               gtag('config', '{{ .Site.GoogleAnalytics }}');
             </script>
         {{ end }}
+        <script>
+            function closeMenu () {
+                var menu = document.querySelector('#top-menu');
+                menu.style.display = 'none';
+            }
+            function openMenu () {
+                var menu = document.querySelector('#top-menu');
+                menu.style.display = 'block';
+            }
+        </script>
     </head>
 
     <body>
+        <nav id="top-menu" style="display: none;">
+            <div id="close-btn" onclick="closeMenu()"><i class="fas fa-times fa-3x"></i></div>
+            <h2>メニュー</h2>
+            {{ range sort .Site.Menus.main }}
+                <div><a href="{{ .URL }}">{{ .Name }}</a></div>
+            {{ end }}
+        </nav>
         <header>
-            <a class="logo" href="{{ $.Site.BaseURL }}">
-                <img  src="{{ .Site.Params.icon | absURL }}" alt="">
-            </a>
-            <span>{{ .Site.Title }}</span>
-            <!-- <ul class="global-menu">
-                {{ range sort .Site.Menus.main }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
-            </ul>
-            <button>ボタン</button>
-            <ul class="hamburger">
+            <div class="hamburger" onclick="openMenu()"><i class="fas fa-bars fa-3x"></i></div>
+            <!-- <ul class="hamburger-menu" style="display: none;">
                 {{ range sort .Site.Menus.main }}
                     <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                 {{ end }}
             </ul> -->
+            <a href="{{ $.Site.BaseURL }}"><span>{{ .Site.Title }}</span></a>
+            <!-- <ul class="global-menu">
+                {{ range sort .Site.Menus.main }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+            </ul> -->
+            <!-- <button>ボタン</button> -->
         </header>

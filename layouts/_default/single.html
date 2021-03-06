@@ -1,6 +1,6 @@
 <!-- 投稿ページ -->
 {{ partial "header" . }}
-{{ partial "navigation" . }}
+<!-- {{ partial "navigation" . }} -->
 
 <!-- パンくずリスト -->
 <ol class="breadcrumb">
@@ -8,10 +8,12 @@
 </ol>
 <main>
     <article>
-        <h1>{{ .Title }}</h1>
-        <h5>{{ .Description }}</h5>
-        <li style="list-style: none;">{{ partial "tags" . }}</li>
-        <div class="content">{{ .Content }}</div>
+        <div class="article-wrapper">
+            <h1>{{ .Title }}</h1>
+            <h5>{{ .Description }}</h5>
+            <li style="list-style: none;">{{ partial "tags" . }}</li>
+            <div class="content">{{ .Content }}</div>
+        </div>
     </article>
     {{ partial "sidebar" . }}
 </main>

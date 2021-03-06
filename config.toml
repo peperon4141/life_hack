@@ -6,7 +6,13 @@ googleAnalytics = ""
 publishDir = "docs" # ビルド時の出力ディレクトリ
 
 [params]
-author = "Calin Tataru"
+# サイトの基本設定
+favicon = "images/favicon.ico"
+topImage = "images/tokyo.jpg"
+copyright = "&copy; All rights reserved. Powered by トール."
+
+# 著者設定
+author = "トール"
 description = "世田谷ぐらしのITエンジニアのメモ"
 githubUsername = "#"
 
@@ -22,12 +28,6 @@ fontCss = "Noto Serif JP"
 fontLink = "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;700&display=swap" # should match the name on Google Fonts!
 
 # profileImage = "images/profile.jpg"
-
-icon = "images/icon.png"
-
-topImage = "images/tokyo.jpg"
-
-copyright = "&copy; All rights reserved. Powered by トール."
 
 # タイトルが自動で複数形になるのを防ぐ
 pluralizeListTitles = false

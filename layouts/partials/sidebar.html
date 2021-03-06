@@ -7,21 +7,22 @@
         <div class="block categories">
             <h2>カテゴリ</h2>
             {{ if lt 0 (len .Site.Taxonomies.categories) }}
-            <ul>
+            <div>
                 {{ range .Site.Taxonomies.categories.ByCount }}
-                <li><a href="{{ $.Site.BaseURL | relURL }}categories/{{ .Name | urlize }}">{{ .Name }}<span>({{ .Count }})</span></a></li>
+                <a class="tag" href="{{ $.Site.BaseURL | relURL }}categories/{{ .Name | urlize }}">{{ .Name }}<span>({{ .Count }})</span></a>
                 {{ end }}
+            </div>
             </ul>
             {{ end }}
         </div>
         <div class="block tags">
             <h2>タグ</h2>
             {{ if lt 0 (len .Site.Taxonomies.tags) }}
-            <ul>
+            <div>
                 {{ range .Site.Taxonomies.tags.ByCount }}
-                <li><a href="{{ $.Site.BaseURL | relURL }}tags/{{ .Name | urlize }}">{{ .Name }}<span>({{ .Count }})</span></a></li>
+                <a class="tag" href="{{ $.Site.BaseURL | relURL }}tags/{{ .Name | urlize }}">{{ .Name }}<span>({{ .Count }})</span></a>
                 {{ end }}
-            </ul>
+            </div>
             {{ end }}
         </div>
     </div>

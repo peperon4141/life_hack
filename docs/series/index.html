@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Series</title>
         
+            <link rel="icon" href="https://peperon4141.github.io/life_hack/images/favicon.ico">
+        
         
 
 <style>
@@ -15,12 +17,14 @@
 
 <style>
     * {
+         
         font-family: 'Noto Serif JP', serif;
     }
 
     :root {
         --accent: #3eccbf;
-        --secondary: #3e3e3e;
+        --primary: #3e3e3e;
+        --secondary: #f6f6f4;
         --border-width:  2px ;
     }
 </style>
@@ -32,7 +36,9 @@
 
 
 
-<link rel="preconnect" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;JP:wght@200;700&amp;display=swap">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;900&display=swap" rel="stylesheet">
 
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
@@ -64,21 +70,40 @@
         
 
         
+        <script>
+            function closeMenu () {
+                var menu = document.querySelector('#top-menu');
+                menu.style.display = 'none';
+            }
+            function openMenu () {
+                var menu = document.querySelector('#top-menu');
+                menu.style.display = 'block';
+            }
+        </script>
     </head>
 
     <body>
+        <nav id="top-menu" style="display: none;">
+            <div id="close-btn" onclick="closeMenu()"><i class="fas fa-times fa-3x"></i></div>
+            <h2>メニュー</h2>
+            
+                <div><a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミング</a></div>
+            
+                <div><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a></div>
+            
+                <div><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a></div>
+            
+                <div><a href="https://peperon4141.github.io/life_hack/series/">シリーズ</a></div>
+            
+        </nav>
         <header>
-            <a class="logo" href="https://peperon4141.github.io/life_hack/">
-                <img  src="https://peperon4141.github.io/life_hack/images/icon.png" alt="">
-            </a>
-            <span>東京のほほんライフハック</span>
+            <div class="hamburger" onclick="openMenu()"><i class="fas fa-bars fa-3x"></i></div>
+            
+            <a href="https://peperon4141.github.io/life_hack/"><span>東京のほほんライフハック</span></a>
+            
             
         </header>
-<nav>
-    <div class="nav-wrap">
-        <a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミング</a><a href="https://peperon4141.github.io/life_hack/categories/">カテゴリ</a><a href="https://peperon4141.github.io/life_hack/tags/">タグ</a><a href="https://peperon4141.github.io/life_hack/series/">シリーズ</a>
-    </div>
-</nav>
+
 
 <main class="terms">
     <article>
@@ -111,23 +136,24 @@
         <div class="block categories">
             <h2>カテゴリ</h2>
             
-            <ul>
+            <div>
                 
-                <li><a href="https://peperon4141.github.io/life_hack/categories/hugo">hugo<span>(6)</span></a></li>
+                <a class="tag" href="https://peperon4141.github.io/life_hack/categories/hugo">hugo<span>(6)</span></a>
                 
+            </div>
             </ul>
             
         </div>
         <div class="block tags">
             <h2>タグ</h2>
             
-            <ul>
+            <div>
                 
-                <li><a href="https://peperon4141.github.io/life_hack/tags/hugo">hugo<span>(6)</span></a></li>
+                <a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">hugo<span>(6)</span></a>
                 
-                <li><a href="https://peperon4141.github.io/life_hack/tags/layout">layout<span>(1)</span></a></li>
+                <a class="tag" href="https://peperon4141.github.io/life_hack/tags/layout">layout<span>(1)</span></a>
                 
-            </ul>
+            </div>
             
         </div>
     </div>

@@ -1,12 +1,12 @@
 <!-- リストテンプレート -->
 {{ partial "header" . }}
-{{ partial "navigation" . }}
+<!-- {{ partial "navigation" . }} -->
 
 <main class="list">
     <article>
         <div class="article-wrapper">
             <h1>{{ .Title }}</h1>
-            <h2>{{ .Description }}</h2>
+            <h5>{{ .Description }}</h5>
             {{ range (.Paginator 5).Pages }}
                 {{ partial "list-item" . }}
             {{ end }}

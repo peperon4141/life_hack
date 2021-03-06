@@ -7,12 +7,14 @@
 <!-- Common CSS -->
 <style>
     * {
-        font-family: '{{ .Site.Params.fontCss }}', serif;
+        /* font-family: 'Noto Serif JP', serif; */
+        font-family: 'Noto Serif JP', serif;
     }
 
     :root {
         --accent: {{ .Site.Params.accent | default "#2196F3" }};
-        --secondary: {{ .Site.Params.secondary | default "#3e3e3e" }};
+        --primary: {{ .Site.Params.primary | default "#3e3e3e" }};
+        --secondary: {{ .Site.Params.secondary | default "#f6f6f4" }};
         --border-width: {{ if .Site.Params.showBorder | default false }} 2px {{ else }} 0 {{ end }};
     }
 </style>
@@ -24,7 +26,9 @@
 {{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . | absURL }}"> {{ end }}
 
 <!-- google fonts -->
-<link rel="preconnect" rel="stylesheet" href="{{ .Site.Params.fontLink }}">
+<!-- <link rel="preconnect" rel="stylesheet" href="{{ .Site.Params.fontLink }}"> -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;900&display=swap" rel="stylesheet">
 
 <!-- highlight.js -->
 {{ if .Site.Params.highlight | default false }} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ .Site.Params.highlightStyle | default "default" }}.min.css"> {{ end }}
