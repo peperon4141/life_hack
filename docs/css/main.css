@@ -260,7 +260,7 @@ aside {
 /* List item for posts/projects */
 .item:not(:last-of-type) {
     padding: 10px 0;
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px solid var(--secondary);
 }
 
 .tag {
@@ -302,4 +302,13 @@ aside {
     position: absolute;
     bottom: 0px;
     left: 0px;
+}
+
+/* Table */
+
+th,td {
+    border: solid 1px var(--primary);          /* 枠線指定 */
+}
+table {
+    border-collapse:  collapse; /* セルの線を重ねる */
 }
