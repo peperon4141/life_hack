@@ -5,6 +5,11 @@ theme = "original"
 googleAnalytics = ""
 publishDir = "docs" # ビルド時の出力ディレクトリ
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
 # サイトの基本設定
 favicon = "images/favicon.ico"
@@ -38,24 +43,29 @@ pluralizeListTitles = false
     tag = "tags"
 
 [[menu.main]]
+    url = "/読書/"
+    name = "読書"
+    weight = 20
+
+[[menu.main]]
     url = "/プログラミング/"
     name = "プログラミング"
-    weight = 2
+    weight = 30
 
 [[menu.main]]
     url = "/categories/"
     name = "カテゴリ"
-    weight = 3
+    weight = 40
 
 [[menu.main]]
     url = "/tags/"
     name = "タグ"
-    weight = 4
+    weight = 50
 
 [[menu.main]]
     url = "/series/"
     name = "シリーズ"
-    weight = 5
+    weight = 60
 
 # Social icons to be shown on the right-hand side of the navigation bar.
 # The "name" field should match the name of the icon in Font Awesome.

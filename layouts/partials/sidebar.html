@@ -9,7 +9,11 @@
             {{ if lt 0 (len .Site.Taxonomies.categories) }}
             <div>
                 {{ range .Site.Taxonomies.categories.ByCount }}
-                <a class="tag" href="{{ $.Site.BaseURL | relURL }}categories/{{ .Name | urlize }}">{{ .Name }}<span>({{ .Count }})</span></a>
+                <a class="tag" href="{{ $.Site.BaseURL | relURL }}categories/{{ .Name | urlize }}">
+                    <i class="fa fa-tag"></i>
+                    {{ .Name }}
+                    <span>({{ .Count }})</span>
+                </a>
                 {{ end }}
             </div>
             </ul>
@@ -20,7 +24,11 @@
             {{ if lt 0 (len .Site.Taxonomies.tags) }}
             <div>
                 {{ range .Site.Taxonomies.tags.ByCount }}
-                <a class="tag" href="{{ $.Site.BaseURL | relURL }}tags/{{ .Name | urlize }}">{{ .Name }}<span>({{ .Count }})</span></a>
+                <a class="tag" href="{{ $.Site.BaseURL | relURL }}tags/{{ .Name | urlize }}">
+                    <i class="fa fa-tag"></i>
+                    {{ .Name }}
+                    <span>({{ .Count }})</span>
+                </a>
                 {{ end }}
             </div>
             {{ end }}

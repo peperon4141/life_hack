@@ -9,6 +9,9 @@
 <main>
     <article>
         <div class="article-wrapper">
+            {{ if .Params.featured_image }}
+                <img src="{{ .Params.featured_image | absURL}}" class="img" alt="{{ .Title }}">
+            {{ end }}
             <h1>{{ .Title }}</h1>
             <h5>{{ .Description }}</h5>
             <li style="list-style: none;">{{ partial "tags" . }}</li>
