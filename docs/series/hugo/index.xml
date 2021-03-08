@@ -6,7 +6,32 @@
     <description>Recent content in Hugo on 東京のほほんライフハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 26 Feb 2021 11:35:35 +0900</lastBuildDate><atom:link href="https://peperon4141.github.io/life_hack/series/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Mar 2021 09:16:57 +0900</lastBuildDate><atom:link href="https://peperon4141.github.io/life_hack/series/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo GithubPagesで公開</title>
+      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</link>
+      <pubDate>Mon, 08 Mar 2021 09:16:57 +0900</pubDate>
+      
+      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</guid>
+      <description>Githubは、GithubPagesという機能があり、docsディレクトリを公開することができます。
+Publicなリポジトリだけの機能です。
+出力ディレクトリを設定 Hugoで出力するディレクトリをdocsディレクトリにする必要があります。
+config.tomlに以下の設定を追加することで出力先を設定できます。
+publishDir = &amp;quot;docs&amp;quot; 本番用のビルド設定 Hugoではディレクトリによって、環境独自の設定を追加できます。
+config ┣ config.toml // デフォルトの設定 ┣ production ┃ ┗ config.toml // 本番用の設定 ┗ development ┗ config.toml // 開発用の設定 GithubPagesではサブディレクトリが公開されるので、baseurlで調整します。 以下の要領で、本番の設定をします。
+baseurl = &amp;quot;https://example.com/repo_name/&amp;quot; # URL canonifyurls = true # aタグなどのリンクを絶対パスにする場合はtrue GoogleDomainsでドメインを取得 独自ドメインを設定したいので、取得します。 Google Domainsを使いました。
+Google Domainsの特徴は以下です。
+ 全て込み（メール転送、プライバシー設定など）のシンプルな料金体系で1050[円/年]~ Googleの安定したインフラ サブドメインの管理が簡単  私が取得したドメインは1400[円/年]でした。
+GoogleDomainsの設定 GithubPagesに独自ドメインを設定する方法は2つあるようなのです。
+ Aレコード（Address Record）:
+独自ドメインにIPアドレスを紐付けます。独自ドメインにアクセスした時に、指定されたIPアドレスにアクセスできるようになります。 CNAME（Canonical NAME）:
+Canonicalは規準的なという意味です。ホスト名の別名を定義することができます。
+別名のホスト名でアクセスされた場合、正規ホスト名に転送します。  Aレコードの場合、Githubが指定しているIPアドレスを紐付けることになります。
+CNAMEの場合、xxx.github.io のようなGithubのホスト名に対して、別名を設定することになります。
+※ GoogleDomainsは仕様上Aレコードでしか対応できないようです。
+Aレコードで指定する https://domains.google.com/m/registrar/?hl=ja のページからAレコードを指定します。</description>
+    </item>
+    
     <item>
       <title>HugoのTomlの書き方</title>
       <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-toml/</link>

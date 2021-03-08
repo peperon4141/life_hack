@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hugoのディレクトリ構造を理解する</title>
+        <title>Hugo GithubPagesで公開</title>
         
             <link rel="icon" href="https://peperon4141.github.io/life_hack/images/favicon.ico">
         
@@ -108,53 +108,72 @@
 <ol class="breadcrumb">
   <li><a href="https://peperon4141.github.io/life_hack/">ホーム</a>
   <li><a href="https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミングs</a>
-  <li>Hugoのディレクトリ構造を理解する
+  <li>Hugo GithubPagesで公開
 </ol>
 <main>
     <article>
         <div class="article-wrapper">
             
-            <h1>Hugoのディレクトリ構造を理解する</h1>
-            <h5>Hugoで生成されるディレクトリと各用途を解説</h5>
+            <h1>Hugo GithubPagesで公開</h1>
+            <h5>Hugoで生成したページをGithubPagesで独自ドメインで公開します</h5>
             <li style="list-style: none;">
 <a class="tag" href="https://peperon4141.github.io/life_hack/tags/hugo">
   <i class="fa fa-tag"></i><span>Hugo</span>
 </a>
 
 </li>
-            <div class="content"><h2 id="hugoで生成される構造">Hugoで生成される構造</h2>
-<pre><code>.
-├── config.toml
-├── archetypes
-├── content
-├── data
-├── layouts
-├── static
-└── themes
-</code></pre><p>参照: <a href="https://gohugo.io/getting-started/directory-structure/">Directory Structure</a></p>
-<h2 id="configtoml">config.toml</h2>
-<p>Hugoの設定を記述します。</p>
-<p>環境毎に設定を変更したい場合は、configディレクトリが有効です。（configディレクトリはデフォルトでは作成されない）<br>
-configディレクトリを使用することで、環境ごとの追加設定を定義することもできます。</p>
-<h2 id="archetypes">archetypes</h2>
-<p>新しいコンテンツを追加する際のテンプレートを定義できます。<br>
-参照: <a href="https://gohugo.io/content-management/archetypes/">Archetypes</a></p>
-<h2 id="content">content</h2>
-<p>記事を入れるディレクトリです。<br>
-このディレクトリ構造はそのまま記事のURLになります。<br>
-それぞれのディレクトリは、セクションとして扱われます。</p>
-<p>例えば、 <code>blog</code> , <code>articles</code> , <code>tutorials</code> のように、記事をセクション分けしたい場合は、<br>
-<code>content/blog</code> , <code>content/articles</code> , <code>content/tutorials</code> のようにディレクトリを作るだけです。</p>
-<h2 id="data">data</h2>
-<p>設定ファイルを使用したい場合に、このディレクトリを使用できます。<br>
-YAML, JSON, TOMLなどのフォーマットで定義できます。</p>
-<p><a href="https://gohugo.io/templates/data-templates/">サンプル</a>はここにあります。</p>
-<h2 id="layouts">layouts</h2>
-<p>画像、CSS、JavaScriptなどのような、静的コンテンツ(動的に変わらないコンテンツ)を配置します。<br>
-サイトをビルドすると、staticディレクトリのコンテンツはそのままビルド結果にコピーされます。</p>
-<h2 id="resources">resources</h2>
-<p>このディレクトリはデフォルトでは作成されません。<br>
-キャッシュなどのスピードアップのためなどに使用されるディレクトリです。</p>
+            <div class="content"><p>Githubは、GithubPagesという機能があり、docsディレクトリを公開することができます。<br>
+Publicなリポジトリだけの機能です。</p>
+<h2 id="出力ディレクトリを設定">出力ディレクトリを設定</h2>
+<p>Hugoで出力するディレクトリをdocsディレクトリにする必要があります。<br>
+config.tomlに以下の設定を追加することで出力先を設定できます。</p>
+<pre><code>publishDir = &quot;docs&quot;
+</code></pre><h2 id="本番用のビルド設定">本番用のビルド設定</h2>
+<p>Hugoではディレクトリによって、環境独自の設定を追加できます。</p>
+<pre><code>config
+  ┣  config.toml  // デフォルトの設定
+  ┣  production
+  ┃    ┗  config.toml  // 本番用の設定
+  ┗  development
+       ┗  config.toml  // 開発用の設定
+</code></pre><p>GithubPagesではサブディレクトリが公開されるので、baseurlで調整します。
+以下の要領で、本番の設定をします。</p>
+<pre><code>baseurl = &quot;https://example.com/repo_name/&quot; # URL
+canonifyurls = true # aタグなどのリンクを絶対パスにする場合はtrue
+</code></pre><h2 id="googledomainsでドメインを取得">GoogleDomainsでドメインを取得</h2>
+<p>独自ドメインを設定したいので、取得します。
+<a href="https://domains.google.com/">Google Domains</a>を使いました。<br>
+Google Domainsの特徴は以下です。</p>
+<ul>
+<li>全て込み（メール転送、プライバシー設定など）のシンプルな料金体系で1050[円/年]~</li>
+<li>Googleの安定したインフラ</li>
+<li>サブドメインの管理が簡単</li>
+</ul>
+<p>私が取得したドメインは1400[円/年]でした。</p>
+<h2 id="googledomainsの設定">GoogleDomainsの設定</h2>
+<p>GithubPagesに独自ドメインを設定する方法は2つあるようなのです。</p>
+<ul>
+<li>Aレコード（Address Record）:<br>
+独自ドメインにIPアドレスを紐付けます。独自ドメインにアクセスした時に、指定されたIPアドレスにアクセスできるようになります。</li>
+<li>CNAME（Canonical NAME）:<br>
+Canonicalは<code>規準的な</code>という意味です。ホスト名の別名を定義することができます。<br>
+別名のホスト名でアクセスされた場合、正規ホスト名に転送します。</li>
+</ul>
+<p>Aレコードの場合、Githubが指定しているIPアドレスを紐付けることになります。<br>
+CNAMEの場合、<code>xxx.github.io</code> のようなGithubのホスト名に対して、別名を設定することになります。</p>
+<p>※ GoogleDomainsは仕様上Aレコードでしか対応できないようです。</p>
+<h3 id="aレコードで指定する">Aレコードで指定する</h3>
+<p><a href="https://domains.google.com/m/registrar/?hl=ja">https://domains.google.com/m/registrar/?hl=ja</a> のページからAレコードを指定します。</p>
+<p><code>DNS</code>のメニューを選択すると、スクロールして下の方に<code>カスタム リソース レコード</code>が設定できます。<br>
+以下のURLにGithubの4つのIPアドレスが載っているので、これを設定します。
+<a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain</a></p>
+<h2 id="githubpagesの設定">GithubPagesの設定</h2>
+<p>Githubのリポジトリから、<code>Settings</code> &gt; <code>GitHub Pages</code>へ行きます。
+<code>Custom domain</code>の設定から、GoogleDomainsで取得したドメインを入力して保存します。</p>
+<h2 id="https対応">Https対応</h2>
+<p><code>Settings</code> &gt; <code>GitHub Pages</code>の<code>Enforce HTTPS</code>のチェックを入れるだけです。
+なんですが、カスタムドメイン設定直後はチェックを押せないようです。
+1日程度待ってチェックを付けれるようになるようなので、ひたすら待ちましょう！</p>
 </div>
         </div>
     </article>
