@@ -1,5 +1,5 @@
 {{ range .Params.tags }}
-<a class="tag" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">
+<a class="tag" href="{{ $.Site.BaseURL | relURL }}tags/{{ . | urlize }}">
   <i class="fa fa-tag"></i><span>{{ . }}</span>
 </a>
 {{ end }}

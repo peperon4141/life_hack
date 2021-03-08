@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on 東京のほほんライフハック</title>
+    <title>Series on ちょいハック</title>
     <link>https://choihack.com/series/</link>
-    <description>Recent content in Series on 東京のほほんライフハック</description>
+    <description>Recent content in Series on ちょいハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 08 Mar 2021 09:16:57 +0900</lastBuildDate><atom:link href="https://choihack.com/series/index.xml" rel="self" type="application/rss+xml" />

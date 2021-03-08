@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on 東京のほほんライフハック</title>
+    <title>Hugo on ちょいハック</title>
     <link>https://choihack.com/categories/hugo/</link>
-    <description>Recent content in Hugo on 東京のほほんライフハック</description>
+    <description>Recent content in Hugo on ちょいハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 08 Mar 2021 09:16:57 +0900</lastBuildDate><atom:link href="https://choihack.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
@@ -15,6 +15,7 @@
       <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</guid>
       <description>Githubは、GithubPagesという機能があり、docsディレクトリを公開することができます。
 Publicなリポジトリだけの機能です。
+この機能を使って、Hugoで作ったウェブサイトを独自ドメインで公開していきます。
 出力ディレクトリを設定 Hugoで出力するディレクトリをdocsディレクトリにする必要があります。
 config.tomlに以下の設定を追加することで出力先を設定できます。
 publishDir = &amp;quot;docs&amp;quot; 本番用のビルド設定 Hugoではディレクトリによって、環境独自の設定を追加できます。
@@ -29,7 +30,7 @@ Canonicalは規準的なという意味です。ホスト名の別名を定義�
 別名のホスト名でアクセスされた場合、正規ホスト名に転送します。  Aレコードの場合、Githubが指定しているIPアドレスを紐付けることになります。
 CNAMEの場合、xxx.github.io のようなGithubのホスト名に対して、別名を設定することになります。
 ※ GoogleDomainsは仕様上Aレコードでしか対応できないようです。
-Aレコードで指定する https://domains.google.com/m/registrar/?hl=ja のページからAレコードを指定します。</description>
+Aレコードで指定する https://domains.</description>
     </item>
     
     <item>
