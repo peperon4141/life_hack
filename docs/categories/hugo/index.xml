@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 東京のほほんライフハック</title>
-    <link>https://peperon4141.github.io/life_hack/categories/hugo/</link>
+    <link>https://choihack.com/categories/hugo/</link>
     <description>Recent content in Hugo on 東京のほほんライフハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 08 Mar 2021 09:16:57 +0900</lastBuildDate><atom:link href="https://peperon4141.github.io/life_hack/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Mar 2021 09:16:57 +0900</lastBuildDate><atom:link href="https://choihack.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo GithubPagesで公開</title>
-      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</link>
+      <link>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</link>
       <pubDate>Mon, 08 Mar 2021 09:16:57 +0900</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</guid>
+      <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</guid>
       <description>Githubは、GithubPagesという機能があり、docsディレクトリを公開することができます。
 Publicなリポジトリだけの機能です。
 出力ディレクトリを設定 Hugoで出力するディレクトリをdocsディレクトリにする必要があります。
@@ -34,10 +34,10 @@ Aレコードで指定する https://domains.google.com/m/registrar/?hl=ja の�
     
     <item>
       <title>HugoのTomlの書き方</title>
-      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-toml/</link>
+      <link>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-toml/</link>
       <pubDate>Fri, 26 Feb 2021 11:35:35 +0900</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-toml/</guid>
+      <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-toml/</guid>
       <description>TOMLの記法についてまとめます。
 TOMLとは TOMLとは、設定ファイルを記述するための言語です。 明瞭な文法のため、人間に読みやすくなっています。
 コメント コメントは # から改行までがコメントになります。
@@ -47,10 +47,10 @@ TOMLとは TOMLとは、設定ファイルを記述するための言語です�
     
     <item>
       <title>Hugoの文法を理解する</title>
-      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-syntax/</link>
+      <link>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-syntax/</link>
       <pubDate>Fri, 26 Feb 2021 11:27:35 +0900</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-syntax/</guid>
+      <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-syntax/</guid>
       <description>Hugoのテーマを自作やカスタマイズするにあたり、必要そうな文法をまとめます。
 変数 変数の定義は、変数名に $ を付け、 := で代入します。
 {{ $変数名 := 値 }} 参照するときは、 $変数名 とします。
@@ -64,10 +64,10 @@ Hello HUGO World! range 変数をループ処理できます。
     
     <item>
       <title>HugoのLayoutについて理解する</title>
-      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</link>
+      <link>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</link>
       <pubDate>Tue, 23 Feb 2021 00:00:00 +0900</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</guid>
+      <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</guid>
       <description>HugoのLayoutの中身について理解していきます。
 Layoutの中身は要はテンプレートで、各種ページのHTMLがレンダリングされる際にこれらのテンプレートが使用されます。
 Hugoのページ構成 Section Page Templates
@@ -79,10 +79,10 @@ content/ ├── _index.html（ホームページ） ├── page-1.md（通
     
     <item>
       <title>Hugoのディレクトリ構造を理解する</title>
-      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-directorystructure/</link>
+      <link>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-directorystructure/</link>
       <pubDate>Sun, 14 Feb 2021 09:27:35 +0900</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-directorystructure/</guid>
+      <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-directorystructure/</guid>
       <description>Hugoで生成される構造 . ├── config.toml ├── archetypes ├── content ├── data ├── layouts ├── static └── themes 参照: Directory Structure
 config.toml Hugoの設定を記述します。
 環境毎に設定を変更したい場合は、configディレクトリが有効です。（configディレクトリはデフォルトでは作成されない）
@@ -105,10 +105,10 @@ resources このディレクトリはデフォルトでは作成されません�
     
     <item>
       <title>Hugoの記事をタクソノミーで分類する</title>
-      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-taxonomy/</link>
+      <link>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-taxonomy/</link>
       <pubDate>Sun, 14 Feb 2021 09:27:35 +0900</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-taxonomy/</guid>
+      <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-taxonomy/</guid>
       <description>Hugoを使って記事を分類してみます。
 Hugoのデフォルトでの記事の分類方法    種類 説明     section ディレクトリで分類 例)/{section_name}/index.html   tag 記事にタグを付けて分類   category 記事にカテゴリを付けて分類。カテゴリは階層化できる   series シリーズ物の記事を作れる    Hugoで記事を分類する方法一覧 Hugoで記事を分類する方法は複数あります。
 | セクション | contentディレクトリ以下にフォルダを作ると、セクションになります ｜ | タグ | 記事毎にタグを設定し、記事を分類します ｜ | カテゴリ | タグと似ていますが、カテゴリは階層構造を持つことができます｜
@@ -118,10 +118,10 @@ Actor &amp;lt;- Taxonomy Bruce Willis &amp;lt;- Term The Sixth Sense &amp;lt;- V
     
     <item>
       <title>Markdown記法一覧</title>
-      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-markdownsamples/</link>
+      <link>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-markdownsamples/</link>
       <pubDate>Sun, 14 Feb 2021 09:27:35 +0900</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-markdownsamples/</guid>
+      <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-markdownsamples/</guid>
       <description>改行 &amp;lt;br&amp;gt; or スペース2つ  見出し # 見出し1 ## 見出し2 ### 見出し3 ↓
 見出し1 見出し2 見出し3 見出し4 見出し5  番号リスト 1. 番号リスト1 2. 番号リスト2 ↓
  番号リスト1 番号リスト2   リスト - リスト1 - リスト2 ↓

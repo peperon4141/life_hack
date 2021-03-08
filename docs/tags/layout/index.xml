@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Layout on 東京のほほんライフハック</title>
-    <link>https://peperon4141.github.io/life_hack/tags/layout/</link>
+    <link>https://choihack.com/tags/layout/</link>
     <description>Recent content in Layout on 東京のほほんライフハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://peperon4141.github.io/life_hack/tags/layout/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://choihack.com/tags/layout/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HugoのLayoutについて理解する</title>
-      <link>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</link>
+      <link>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</link>
       <pubDate>Tue, 23 Feb 2021 00:00:00 +0900</pubDate>
       
-      <guid>https://peperon4141.github.io/life_hack/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</guid>
+      <guid>https://choihack.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</guid>
       <description>HugoのLayoutの中身について理解していきます。
 Layoutの中身は要はテンプレートで、各種ページのHTMLがレンダリングされる際にこれらのテンプレートが使用されます。
 Hugoのページ構成 Section Page Templates
