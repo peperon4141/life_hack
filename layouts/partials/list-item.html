@@ -12,7 +12,7 @@
     {{ end }}
     {{ with .Params.link }} {{ $.Scratch.Set "link" . }} {{ end }}
 
-    {{ .Date.Format (.Site.Params.dateFormat | default "2006/01/02 15:04") | $.Scratch.Set "subheader" }}
+    {{ .Date.Format (.Site.Params.dateFormat | default "2006/01/02") | $.Scratch.Set "subheader" }}
     {{ with .Description }} {{ $.Scratch.Set "subheader" . }} {{ end }}
 
     <h2><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h2>
