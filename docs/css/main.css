@@ -45,6 +45,9 @@ img {
     margin: 0 auto;
     border: 1px solid var(--secondary);
 }
+iframe {
+    margin: 0 auto;
+}
 h1::after {
     content: '';
     display: block;
@@ -308,8 +311,13 @@ table {
 }
 
 /* プログラム */
-code {
+pre > code {
     padding: 1.5em !important;
+}
+code {
+    color: #880000;
+    background-color: var(--secondary);
+    padding: 0 2px;
 }
 
 ol,ul {
