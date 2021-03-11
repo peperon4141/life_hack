@@ -2,7 +2,7 @@ languageCode = "ja-jp"
 title = "ちょいハック"
 theme = "original"
 # disqusShortname = "username" # delete this to disable disqus comments
-googleAnalytics = ""
+googleAnalytics = "G-MS2GT03MFC"
 publishDir = "docs" # ビルド時の出力ディレクトリ
 
 [markup]
