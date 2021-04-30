@@ -79,8 +79,8 @@ description: ""
 
 ## 画像
 ```
-![代替えテキスト](/images/icon.png)
-![代替えテキスト](/images/icon.png "タイトル")
+![代替えテキスト](/img/icon.png)
+![代替えテキスト](/img/icon.png "タイトル")
 ```
 
 ****

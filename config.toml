@@ -10,7 +10,9 @@ publishDir = "docs" # ビルド時の出力ディレクトリ
 home = ["HTML", "RSS", "Algolia"]
 
 [params]
-header_image = "images/tokyo3.jpg"
+favicon = "img/favicon.ico"
+copyright = "&copy; All rights reserved. Powered by トール."
+header_image = "img/tokyo3.jpg"
 SEOTitle = "プログラミングを中心に、現役web系エンジニアが興味を持ったことを徒然と書いていきます"
 description = "プログラミングを中心に、現役web系エンジニアが興味を持ったことを徒然と書いていきます"
 keyword = "programming, software, blog、プログラミング、エンジニア"
@@ -27,7 +29,7 @@ omit_categories = false
 
 # Sidebar settings
 sidebar_about_description = "web系エンジニア歴5年のエンジニアです。バックエンドもフロントエンドも色々やっています。"
-sidebar_avatar = "images/profile.jpg" # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar_avatar = "img/profile.jpg" # use absolute URL, seeing it's used in both `/` and `/about/`
 featured_tags = true
 featured_condition_size = 1
 about_me = true

@@ -12,8 +12,8 @@ publishDir = "docs" # ビルド時の出力ディレクトリ
 
 [params]
 # サイトの基本設定
-favicon = "images/favicon.ico"
-top_image = "images/tokyo.jpg"
+favicon = "img/favicon.ico"
+top_image = "img/tokyo.jpg"
 copyright = "&copy; All rights reserved. Powered by トール."
 
 # 著者設定
@@ -32,7 +32,7 @@ highlightLanguages = ["javascript", "toml"]
 fontCss = "Noto Serif JP"
 fontLink = "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;700&display=swap" # should match the name on Google Fonts!
 
-# profileImage = "images/profile.jpg"
+# profileImage = "img/profile.jpg"
 
 # タイトルが自動で複数形になるのを防ぐ
 pluralizeListTitles = false
