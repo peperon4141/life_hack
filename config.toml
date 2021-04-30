@@ -4,6 +4,7 @@ languageCode = "ja-jp"
 googleAnalytics = "G-MS2GT03MFC"
 paginate = 5 #frontpage pagination
 hasCJKLanguage = true
+publishDir = "docs" # ビルド時の出力ディレクトリ
 
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
