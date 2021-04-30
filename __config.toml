@@ -1,0 +1,97 @@
+languageCode = "ja-jp"
+title = "ちょいハック"
+theme = "cleanwhite"
+# disqusShortname = "username" # delete this to disable disqus comments
+googleAnalytics = "G-MS2GT03MFC"
+publishDir = "docs" # ビルド時の出力ディレクトリ
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+# サイトの基本設定
+favicon = "images/favicon.ico"
+top_image = "images/tokyo.jpg"
+copyright = "&copy; All rights reserved. Powered by トール."
+
+# 著者設定
+author = "トール"
+description = "世田谷ぐらしのITエンジニアのメモ"
+githubUsername = "#"
+
+# デザインを指定
+accent = "#3eccbf" # アクセントの色
+showBorder = true # 上下にボーダーカラーを表示するかどうか
+
+highlight = true
+highlightStyle = "default"
+highlightLanguages = ["javascript", "toml"]
+
+fontCss = "Noto Serif JP"
+fontLink = "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;700&display=swap" # should match the name on Google Fonts!
+
+# profileImage = "images/profile.jpg"
+
+# タイトルが自動で複数形になるのを防ぐ
+pluralizeListTitles = false
+
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
+
+[[menu.main]]
+    url = "/読書/"
+    name = "読書"
+    weight = 20
+
+[[menu.main]]
+    url = "/プログラミング/"
+    name = "プログラミング"
+    weight = 30
+
+[[menu.main]]
+    url = "/categories/"
+    name = "カテゴリ"
+    weight = 40
+
+[[menu.main]]
+    url = "/tags/"
+    name = "タグ"
+    weight = 50
+
+[[menu.main]]
+    url = "/series/"
+    name = "シリーズ"
+    weight = 60
+
+# Social icons to be shown on the right-hand side of the navigation bar.
+# The "name" field should match the name of the icon in Font Awesome.
+# The list of available icons can be found at http://fontawesome.io/icons.
+
+# [[menu.icon]]
+#     url = "mailto:me@example.com"
+#     name = "fas fa-envelope"
+#     weight = 1
+
+# [[menu.icon]]
+#     url = "https://github.com/username/"
+#     name = "fab fa-github"
+#     weight = 2
+
+# [[menu.icon]]
+#     url = "https://twitter.com/username/"
+#     name = "fab fa-twitter"
+#     weight = 3
+
+# [[menu.icon]]
+#     url = "https://www.linkedin.com/in/username/"
+#     name = "fab fa-linkedin"
+#     weight = 4
+
+# [[menu.icon]]
+#     url = "https://www.stackoverflow.com/username/"
+#     name = "fab fa-stack-overflow"
+#     weight = 5
