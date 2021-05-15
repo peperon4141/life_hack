@@ -53,7 +53,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="https://choihack.com/css/custom-font.css">
+    <link rel="stylesheet" href="https://choihack.com/css/custom.css">
 
     
     
@@ -97,6 +97,10 @@
                         
                         <li>
                             <a href="https://choihack.com/categories/hugo">hugo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/programing">programing</a>
                         </li>
                         
                         <li>
@@ -223,20 +227,17 @@
         <h5>FEATURED TAGS</h5>
         <div class="tags">
             
+                <a href="https://choihack.com/tags/hugo">hugo(7)</a>
             
-               
-                    <a href="https://choihack.com/tags/hugo" title="hugo">
-                        hugo
-                    </a>
-               
+                <a href="https://choihack.com/tags/git">git(1)</a>
             
-               
+                <a href="https://choihack.com/tags/layout">layout(1)</a>
             
-               
+                <a href="https://choihack.com/tags/%E3%82%B3%E3%83%AD%E3%83%8A">コロナ(1)</a>
             
-               
+                <a href="https://choihack.com/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF">ライフハック(1)</a>
             
-               
+                <a href="https://choihack.com/tags/%E8%AA%AD%E6%9B%B8">読書(1)</a>
             
         </div>
     </section>
@@ -303,63 +304,63 @@
 
 
 <footer>
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <ul class="list-inline text-center">
-                 
-                 <li>
-                     <a href='https://choihack.com/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/index.xml' rel="alternate" type="application/rss+xml" title="ちょいハック" >
-                         <span class="fa-stack fa-lg">
-                             <i class="fas fa-circle fa-stack-2x"></i>
-                             <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-                         </span>
-                     </a>
-                 </li>
-                 
-                  
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                   <li>
+                       <a href='https://choihack.com/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/index.xml' rel="alternate" type="application/rss+xml" title="ちょいハック" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   
+                    
 
-                  
-                  
-                  
+                    
+                    
+                    
 
-                  
+                    
 
-      
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-          
-          
-          
-              </ul>
-              <p class="copyright text-muted">
-                  Copyright &copy; ちょいハック 2021
-              </p>
-          </div>
-      </div>
-  </div>
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; ちょいハック 2021
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
 
 
 
 <script>
-  function async(u, c) {
-    var d = document, t = 'script',
-        o = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
 </script>
 
 
@@ -368,24 +369,24 @@
 
 
 <script>
-  
-  if($('#tag_cloud').length !== 0){
-      async("/js/jquery.tagcloud.js",function(){
-          $.fn.tagcloud.defaults = {
-              
-              color: {start: '#bbbbee', end: '#0085a1'},
-          };
-          $('#tag_cloud a').tagcloud();
-      })
-  }
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
 </script>
 
 
 <script>
-  async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
-      var $nav = document.querySelector("nav");
-      if($nav) FastClick.attach($nav);
-  })
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
 </script>
 
 

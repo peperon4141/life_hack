@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="ちょいハック">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://choihack.com/img/tokyo3.jpg">
+    <meta property="twitter:image" content="https://choihack.com/img/tokyo3.jpg" />
+    
+
+    
+    <meta name="title" content="git pullした時にwarningが出力された" />
+    <meta property="og:title" content="git pullした時にwarningが出力された" />
+    <meta property="twitter:title" content="git pullした時にwarningが出力された" />
+    
+
+    
+    <meta name="description" content="git pullした時にwarningが出力された">
+    <meta property="og:description" content="git pullした時にwarningが出力された" />
+    <meta property="twitter:description" content="git pullした時にwarningが出力された" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="programming, software, blog、プログラミング、エンジニア">
+    <link rel="shortcut icon" href="https://choihack.com/img/favicon.ico">
+
+    <title>git pullした時にwarningが出力された-プログラミングを中心に、現役web系エンジニアが興味を持ったことを徒然と書いていきます</title>
+
+    <link rel="canonical" href="https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/git-pull%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/">
+
+    <link rel="stylesheet" href="https://choihack.com/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="https://choihack.com/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="https://choihack.com/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="https://choihack.com/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="https://choihack.com/css/custom.css">
+
+    
+    
+    <script src="https://choihack.com/js/jquery.min.js"></script>
+
+    
+    <script src="https://choihack.com/js/bootstrap.min.js"></script>
+
+    
+    <script src="https://choihack.com/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://choihack.com/">ちょいハック</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://choihack.com/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/hugo">hugo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/programing">programing</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF">ライフハック</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/%E8%AA%AD%E6%9B%B8">読書</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/tokyo3.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="https://choihack.com/tags/git" title="Git">
+                            Git
+                        </a>
+                        
+                    </div>
+                    <h1>git pullした時にwarningが出力された</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                ちょいハック
+                         
+                        on 
+                        Saturday, May 15, 2021
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                    <header>
+                        <h2>目次</h2>
+                    </header>
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#概要">概要</a></li>
+    <li><a href="#git-merge-の選択肢">git merge の選択肢</a>
+      <ul>
+        <li><a href="#git-config-pullrebase-false">git config pull.rebase false</a></li>
+        <li><a href="#git-config-pullrebase-true">git config pull.rebase true</a></li>
+        <li><a href="#git-config-pullff-only">git config pull.ff only</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                
+                <h2 id="概要">概要</h2>
+<p>git pull した時に警告が出るようになりました。</p>
+<pre><code>$ git pull
+warning: Pulling without specifying how to reconcile divergent branches is discouraged.
+You can squelch this message by running one of the following commands sometime before your next pull:
+
+  git config pull.rebase false  # merge (the default strategy)
+  git config pull.rebase true   # rebase
+  git config pull.ff only       # fast-forward only
+
+You can replace &quot;git config&quot; with &quot;git config --global&quot; to set a default preference for all repositories.
+You can also pass --rebase, --no-rebase, or --ff-only on the command line to override the configured default per invocation.
+</code></pre><p>Gitの2.27.0以降から出るようになったようです。
+現在の私のGitバージョン；</p>
+<pre><code>$ git --version
+git version 2.29.2
+</code></pre><p>日本語に翻訳したバージョン：</p>
+<pre><code>警告：分岐したブランチを調整する方法を指定せずにpullすることはお勧めしません。
+次のpullの前に、次のコマンドのいずれかを実行することで、このメッセージを抑制できます。
+
+   git config pull.rebase false ＃ マージ（デフォルトの戦略）
+   git config pull.rebase true  ＃ リベース
+   git config pull.ff only      ＃ fast-forwardのみ
+
+「git config」を「git config --global」に置き換えることで、全リポジトリにデフォルトを設定できます。
+コマンドラインで--rebase、-no-rebase、または--ff-onlyを渡すことで、起動毎にデフォルト設定を上書きできます。
+</code></pre><h2 id="git-merge-の選択肢">git merge の選択肢</h2>
+<p><code>git pull</code>した場合、remote branchからlocal branchにマージしてくれます。<br>
+<code>git merge</code> する場合の挙動を設定できます。</p>
+<h3 id="git-config-pullrebase-false">git config pull.rebase false</h3>
+<p>これはデフォルトの挙動で、これまでの挙動と同じになります。<br>
+<code>rebase</code>せずに<code>fast-forward</code>可能な場合は<code>fast-forward</code>し、そうでない場合は<code>merge commit</code>します。</p>
+<h3 id="git-config-pullrebase-true">git config pull.rebase true</h3>
+<p><code>git pull --rebase</code>を行った場合と同じになり、<code>merge commit</code>が作成されずに、コミット履歴が一直線になります。</p>
+<h3 id="git-config-pullff-only">git config pull.ff only</h3>
+<p><code>--ff-only</code> optionをつけた場合と同じ挙動になります。<br>
+<code>fast-forward</code>可能な場合は<code>fast-forward</code>し、そうでない場合は<code>merge</code>,<code>rebase</code>せずにエラー終了します。</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="https://choihack.com/post/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/%E8%B2%B7%E3%81%A3%E3%81%A6%E3%82%88%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE/" data-toggle="tooltip" data-placement="top" title="コロナ禍で買ってよかったもの">&larr; 前の投稿</a>
+                    </li>
+                    
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+<section>
+    <hr class="hidden-sm hidden-xs">
+    <h5><a href="https://choihack.com/tags/">タグ一覧</a></h5>
+    <div class="tags">
+        
+            <a href="https://choihack.com/tags/git" title="git">git</a>
+        
+            <a href="https://choihack.com/tags/hugo" title="hugo">hugo</a>
+        
+            <a href="https://choihack.com/tags/layout" title="layout">layout</a>
+        
+            <a href="https://choihack.com/tags/%E3%82%B3%E3%83%AD%E3%83%8A" title="コロナ">コロナ</a>
+        
+            <a href="https://choihack.com/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF" title="ライフハック">ライフハック</a>
+        
+            <a href="https://choihack.com/tags/%E8%AA%AD%E6%9B%B8" title="読書">読書</a>
+        
+    </div>
+</section>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="ちょいハック" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   
+                    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; ちょいハック 2021
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-MS2GT03MFC', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
