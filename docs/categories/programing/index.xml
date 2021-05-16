@@ -6,16 +6,7 @@
     <description>Recent content in Programing on ちょいハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 16 May 2021 09:27:35 +0900</lastBuildDate><atom:link href="https://choihack.com/categories/programing/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>git pushした時にエラーが出た</title>
-      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/git-push%E3%81%97%E3%81%9F%E6%99%82%E3%81%AB%E8%AD%A6%E5%91%8A%E3%81%8C%E5%87%BA%E3%81%9F/</link>
-      <pubDate>Sun, 16 May 2021 09:27:35 +0900</pubDate>
-      
-      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/git-push%E3%81%97%E3%81%9F%E6%99%82%E3%81%AB%E8%AD%A6%E5%91%8A%E3%81%8C%E5%87%BA%E3%81%9F/</guid>
-      <description>概要 git pushした時にエラーがでました。 remote: Permission to **REPO** denied to **USER_NAME**. fatal: unable to access &#39;**REPO_URL&#39;: The requested URL returned error: 403 Gitの2.27.0以降から出るようになったようです。 現在の私の</description>
-    </item>
-    
+    <lastBuildDate>Sat, 15 May 2021 09:27:35 +0900</lastBuildDate><atom:link href="https://choihack.com/categories/programing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git pullした時にwarningが出力された</title>
       <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/git-pull%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/</link>
