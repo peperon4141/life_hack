@@ -37,7 +37,7 @@ custom_css = ["css/custom.css"]
 
 [params.social]
 rss = true
-# twitter = "https://twitter.com/mshrh3"
+twitter = "https://twitter.com/magic4141"
 # linkedin = "https://www.linkedin.com/in/masahiro-hiramori-63b992167/"
 # github = "https://github.com/mshr-h"
 # googlescholar = "https://scholar.google.com/citations?user=NSCMi88AAAAJ"
