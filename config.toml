@@ -1,5 +1,6 @@
 title = "ちょいハック"
-theme = "darkwhite"
+# theme = "darkwhite"
+theme = "cleanwhite"
 languageCode = "ja-jp"
 googleAnalytics = "UA-189749451-1"
 paginate = 5 #frontpage pagination
@@ -7,7 +8,7 @@ hasCJKLanguage = true
 publishDir = "docs" # ビルド時の出力ディレクトリ
 
 [outputs]
-home = ["HTML", "RSS", "Algolia"]
+home = ["HTML", "RSS", "AMP", "Algolia"]
 
 [params]
 favicon = "img/favicon.ico"
@@ -71,6 +72,6 @@ startLevel = 2
 [markup.goldmark.renderer]
 unsafe = true
 
-[taxonomies]
-categories = "categories"
-tag = "tags"
+# [taxonomies]
+# categories = "categories"
+# tag = "tags"
