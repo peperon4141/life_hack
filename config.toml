@@ -1,6 +1,6 @@
 title = "ちょいハック"
-# theme = "darkwhite"
-theme = "cleanwhite"
+theme = "darkwhite"
+# theme = "cleanwhite"
 languageCode = "ja-jp"
 googleAnalytics = "UA-189749451-1"
 paginate = 5 #frontpage pagination
@@ -75,3 +75,4 @@ unsafe = true
 # [taxonomies]
 # categories = "categories"
 # tag = "tags"
+# archive = "archives"

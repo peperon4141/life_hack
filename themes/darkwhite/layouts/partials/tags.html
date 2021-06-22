@@ -1,6 +1,4 @@
 <!-- Tags -->
-{{- if isset .Site.Taxonomies "tags" }}
-{{- if not (eq (len .Site.Taxonomies.tags) 0) }}
 <section>
     <hr class="hidden-sm hidden-xs">
     <h5><a href="/tags/">タグ一覧</a></h5>
@@ -10,5 +8,3 @@
         {{ end }}
     </div>
 </section>
-{{- end }}
-{{- end }}

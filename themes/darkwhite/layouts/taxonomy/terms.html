@@ -1,6 +1,6 @@
 {{ define "main" }}
 <!-- Post Content -->
-<article>
+<article class="terms">
     <div class="container">
         <div class="row">
             <!-- Post Container -->
@@ -26,13 +26,8 @@
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-                        {{ $featured_condition_size := .Site.Params.featured_condition_size }}
-                        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                        {{ if gt (len $taxonomy.Pages) $featured_condition_size }}
-                        <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">
-                        {{ $name }}
-                        </a>
-                        {{ end }}
+                        {{ range .Site.Taxonomies.tags.ByCount }}
+                        <a href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}">{{ .Name }}({{ .Count }})</a>
                         {{ end }}
                     </div>
                 </section>

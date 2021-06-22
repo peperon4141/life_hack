@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ホーム on ちょいハック</title>
+    <title>ちょいハック</title>
     <link>https://choihack.com/</link>
-    <description>Recent content in ホーム on ちょいハック</description>
+    <description>Recent content on ちょいハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://choihack.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 May 2021 09:27:35 +0900</lastBuildDate><atom:link href="https://choihack.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git pullした時にwarningが出力された</title>
       <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/git-pull%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/</link>

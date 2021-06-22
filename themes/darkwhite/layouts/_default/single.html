@@ -2,7 +2,16 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header {
+        position: relative;
         background-image: url('{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ .Site.Params.header_image | relURL}}{{ end }}')
+    }
+    header.intro-header::before {
+        content: '';
+        background-color: rgba(0, 8, 0, 0.7);
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
     }
 </style>
 <header class="intro-header">
@@ -45,7 +54,7 @@
 
 {{ define "main" }}
 <!-- Post Content -->
-<article>
+<article class="default_single">
     <div class="container">
         <div class="row">
 
