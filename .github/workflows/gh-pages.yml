@@ -38,8 +38,9 @@ jobs:
       - name: Hugo build
         run: hugo
 
-      - name: archive
-        uses: actions/upload-artifact@master
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'master'
         with:
-          name: docs
-          path: ./docs
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
