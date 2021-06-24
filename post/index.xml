@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ちょいハック</title>
+    <link>https://choihack.com/post/</link>
+    <description>Recent content in Posts on ちょいハック</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 15 May 2021 09:27:35 +0900</lastBuildDate><atom:link href="https://choihack.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git pullした時にwarningが出力された</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/git-pull%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/</link>
+      <pubDate>Sat, 15 May 2021 09:27:35 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/git-pull%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/</guid>
+      <description>概要 git pull した時に警告が出るようになりました。 $ git pull warning: Pulling without specifying how to reconcile divergent branches is discouraged. You can squelch this message by running one of the following commands sometime before your next pull: git config pull.rebase false # merge (the default strategy) git config pull.rebase true # rebase git config</description>
+    </item>
+    
+    <item>
+      <title>コロナ禍で買ってよかったもの</title>
+      <link>https://choihack.com/post/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/%E8%B2%B7%E3%81%A3%E3%81%A6%E3%82%88%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE/</link>
+      <pubDate>Thu, 11 Mar 2021 07:52:59 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/%E8%B2%B7%E3%81%A3%E3%81%A6%E3%82%88%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE/</guid>
+      <description>コロナになり、リモートワークで働く人が増えていると思います。 通勤時間が減ったのはいいんですが、ずっと家にこもっていると気が滅入ってきます。 そ</description>
+    </item>
+    
+    <item>
+      <title>Hugo GithubPagesで公開</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</link>
+      <pubDate>Mon, 08 Mar 2021 09:16:57 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-githubpages/</guid>
+      <description>Githubは、GithubPagesという機能があり、docsディレクトリを公開することができます。 Publicなリポジトリだけの機能です</description>
+    </item>
+    
+    <item>
+      <title>たいていのことは20時間で習得できる</title>
+      <link>https://choihack.com/post/%E8%AA%AD%E6%9B%B8/%E3%81%9F%E3%81%84%E3%81%A6%E3%81%84%E3%81%AE%E3%81%93%E3%81%A8%E3%81%AF20%E6%99%82%E9%96%93%E3%81%A7%E7%BF%92%E5%BE%97%E3%81%A7%E3%81%8D%E3%82%8B/</link>
+      <pubDate>Thu, 04 Mar 2021 08:00:30 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E8%AA%AD%E6%9B%B8/%E3%81%9F%E3%81%84%E3%81%A6%E3%81%84%E3%81%AE%E3%81%93%E3%81%A8%E3%81%AF20%E6%99%82%E9%96%93%E3%81%A7%E7%BF%92%E5%BE%97%E3%81%A7%E3%81%8D%E3%82%8B/</guid>
+      <description>著者について 著者はジョシュ・カウフマンで、アメリカ・コロラド州在住です。 https://joshkaufman.net/ というウェブサイトを運営しており、「もっと稼ぎ、もっと多くの仕事を</description>
+    </item>
+    
+    <item>
+      <title>HugoのTomlの書き方</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-toml/</link>
+      <pubDate>Fri, 26 Feb 2021 11:35:35 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-toml/</guid>
+      <description>TOMLの記法についてまとめます。 TOMLとは TOMLとは、設定ファイルを記述するための言語です。 明瞭な文法のため、人間に読みやすくなってい</description>
+    </item>
+    
+    <item>
+      <title>Hugoの文法を理解する</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-syntax/</link>
+      <pubDate>Fri, 26 Feb 2021 11:27:35 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-syntax/</guid>
+      <description>Hugoのテーマを自作やカスタマイズするにあたり、必要そうな文法をまとめます。 変数 変数の定義は、変数名に $ を付け、 := で代入します。 {{ $変数名</description>
+    </item>
+    
+    <item>
+      <title>HugoのLayoutについて理解する</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</link>
+      <pubDate>Tue, 23 Feb 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/</guid>
+      <description>HugoのLayoutの中身について理解していきます。 Layoutの中身は要はテンプレートで、各種ページのHTMLがレンダリングされる際にこ</description>
+    </item>
+    
+    <item>
+      <title>Hugoのディレクトリ構造を理解する</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-directorystructure/</link>
+      <pubDate>Sun, 14 Feb 2021 09:27:35 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-directorystructure/</guid>
+      <description>Hugoで生成される構造 . ├── config.toml ├── archetypes ├── content ├── data ├── layouts ├── static └── themes 参照: Directory Structure config.toml Hugoの設定を記述します。 環境毎に設定を変更</description>
+    </item>
+    
+    <item>
+      <title>Hugoの記事をタクソノミーで分類する</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-taxonomy/</link>
+      <pubDate>Sun, 14 Feb 2021 09:27:35 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-taxonomy/</guid>
+      <description>Hugoを使って記事を分類してみます。 Hugoのデフォルトでの記事の分類方法 種類 説明 section ディレクトリで分類 例)/{section_name}/</description>
+    </item>
+    
+    <item>
+      <title>Markdown記法一覧</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-markdownsamples/</link>
+      <pubDate>Sun, 14 Feb 2021 09:27:35 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-markdownsamples/</guid>
+      <description>改行 &amp;lt;br&amp;gt; or スペース2つ 見出し # 見出し1 ## 見出し2 ### 見出し3 ↓ 見出し1 見出し2 見出し3 見出し4 見出し5 番号リスト 1. 番号リスト1 2. 番号リスト2 ↓ 番</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,325 @@
+/* 全体のページの配置（レスポンシブ） */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 80%;
+    background-color: var(--secondary);
+    line-height: 2.0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body > * {
+    width: 100%;
+}
+header {
+    position: sticky;
+    top: 0;
+}
+footer {
+    margin-top: auto;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+article {
+    width: 70%;
+}
+aside {
+    width: 30%;
+}
+/*500pxより小さくなったら1カラム表示*/
+@media (max-width:500px) {
+    article, aside {
+        width: 100%;
+    }
+}
+
+/* Common CSS */
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--secondary);
+}
+iframe {
+    margin: 0 auto;
+}
+h1::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent);
+    border-radius: 1px;
+}
+h2 {
+    margin: 8px 0 8px 0;
+}
+h2::before {
+    content: '';
+    display: inline;
+    border-radius: 1px;
+    border: 1px solid var(--accent);;
+    margin-right: 8px;
+}
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: var(--accent);
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    min-height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border-width) solid var(--accent);
+    background-color: var(--primary);
+}
+header span {
+    color: var(--secondary);
+    font-size: 2vh;
+    flex-grow: 1;
+    text-align: center;
+}
+header a {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.logo > img {
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+/* Hamburger */
+.hamburger {
+    list-style: none;
+}
+.hamburger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    color: var(--secondary);
+}
+.hamburger-menu {
+    display: block;
+    position: absolute;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    padding: 12px;
+    backdrop-filter: blur(2px);
+}
+#top-menu {
+    display: block;
+    position: fixed;
+    background-color: rgba(75, 75, 75, 0.9);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    padding: 12px;
+    backdrop-filter: blur(2px);
+
+    display: flex;
+    flex-direction: column;
+}
+#top-menu > #close-btn {
+    color: var(--secondary);
+}
+#top-menu > div > a {
+    font-size: 2vh;
+}
+
+/* Navigation */
+.nav-wrap {
+    height: 42px;
+    margin: 8px 12px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-wrap > a {
+    width: 100%;
+    font-size: 1.5vh;
+    text-align: center;
+}
+.nav-wrap > a:not(:last-child) {
+    border-right: 1px solid var(--accent);
+}
+
+/* Footer */
+footer {
+    height: 42px;
+    background-color: var(--primary);
+    border-bottom: var(--border-width) solid var(--accent);
+    text-align: center;
+}
+
+/* Home page */
+main.home-page article{
+    width: 100%;
+    margin: 12px;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+}
+
+/* Page content */
+.article-wrapper {
+    margin: 12px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 4%);
+}
+/* .article-wrapper h1 { margin-bottom: 4px;} */
+/* .article-wrapper h2 { margin-top: 20px;} */
+.content {
+    padding-top: 12px;
+}
+
+/* Sidebar */
+aside {
+    display: flex;
+    flex-direction: column;
+}
+.aside-wrapper {
+    padding: 12px;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 4%);
+}
+
+/* Copyright message */
+.copyright {
+    margin: 15px 0;
+}
+
+/* Paginator */
+.paginator {
+    padding: 16px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.paginator > a {
+    border: 1px solid var(--accent);
+    height: 20px;
+    width: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paginator > a[disabled] {
+    opacity: 0.5;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* List item for posts/projects */
+.item h5 { color: var(--primary);}
+.item i { margin-right: 4px; }
+.item:not(:last-of-type)::after {
+    content: '';
+    display: block;
+    background-color: var(--secondary);
+    height: 2px;
+    border-radius: 1px;
+    margin: 16px 8px;
+}
+
+.tag {
+    text-decoration: none;
+    display: inline-block;
+    color: white !important;
+    background-color: var(--accent);
+    padding: 0px 4px;
+    border-radius: 2px;
+    margin: 2px;
+}
+.tag i {
+    margin-right: 4px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin: 8px 16px;
+    padding: 0 0 0 12px;
+    text-align: left;
+}
+.breadcrumb li {
+    display: inline;
+    list-style: none;
+}
+.breadcrumb li:not(:last-child)::after {
+    content: '>';
+    padding: 0 4px;
+}
+
+/* 装飾 */
+.border { position: relative; }
+.border::after {
+    content: '';
+    display: inline-block;
+    background-color: rgba(255, 0, 0, 0.5);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* Table */
+
+th,td {
+    border: solid 1px var(--primary);          /* 枠線指定 */
+}
+table {
+    border-collapse:  collapse; /* セルの線を重ねる */
+}
+
+/* プログラム */
+pre > code {
+    padding: 1.5em !important;
+}
+code {
+    color: #880000;
+    background-color: var(--secondary);
+    padding: 0 2px;
+}
+
+ol,ul {
+    padding-left: 3em;
+}

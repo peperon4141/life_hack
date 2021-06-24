@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="ちょいハック">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://choihack.com/img/tokyo3.jpg">
+    <meta property="twitter:image" content="https://choihack.com/img/tokyo3.jpg" />
+    
+
+    
+    <meta name="title" content="HugoのLayoutについて理解する" />
+    <meta property="og:title" content="HugoのLayoutについて理解する" />
+    <meta property="twitter:title" content="HugoのLayoutについて理解する" />
+    
+
+    
+    <meta name="description" content="Hugoのページの種類や、各ページに適用されるテンプレートの優先度を説明します。">
+    <meta property="og:description" content="Hugoのページの種類や、各ページに適用されるテンプレートの優先度を説明します。" />
+    <meta property="twitter:description" content="Hugoのページの種類や、各ページに適用されるテンプレートの優先度を説明します。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="programming, software, blog、プログラミング、エンジニア">
+    <link rel="shortcut icon" href="https://choihack.com/img/favicon.ico">
+
+    <title>HugoのLayoutについて理解する-プログラミングを中心に、現役web系エンジニアが興味を持ったことを徒然と書いていきます</title>
+
+    <link rel="canonical" href="https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-layout/">
+
+    <link rel="stylesheet" href="https://choihack.com/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="https://choihack.com/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="https://choihack.com/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="https://choihack.com/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="https://choihack.com/css/custom.css">
+
+    
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-189749451-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+
+    
+    
+    <script src="https://choihack.com/js/jquery.min.js"></script>
+
+    
+    <script src="https://choihack.com/js/bootstrap.min.js"></script>
+
+    
+    <script src="https://choihack.com/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://choihack.com/">ちょいハック</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://choihack.com/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/hugo">hugo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/programing">programing</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF">ライフハック</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://choihack.com/categories/%E8%AA%AD%E6%9B%B8">読書</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        position: relative;
+        background-image: url('/img/tokyo3.jpg')
+    }
+    header.intro-header::before {
+        content: '';
+        background-color: rgba(0, 8, 0, 0.7);
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="https://choihack.com/tags/hugo" title="Hugo">
+                            Hugo
+                        </a>
+                        
+                        <a class="tag" href="https://choihack.com/tags/layout" title="Layout">
+                            Layout
+                        </a>
+                        
+                    </div>
+                    <h1>HugoのLayoutについて理解する</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                ちょいハック
+                         
+                        on 
+                        Tuesday, February 23, 2021
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article class="default_single">
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                    <header>
+                        <h2>目次</h2>
+                    </header>
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugoのページ構成">Hugoのページ構成</a>
+      <ul>
+        <li><a href="#contentディレクトリ">Contentディレクトリ</a></li>
+        <li><a href="#ページの種類">ページの種類</a></li>
+      </ul>
+    </li>
+    <li><a href="#ホームページ">ホームページ</a></li>
+    <li><a href="#セクションページ">セクションページ</a></li>
+    <li><a href="#リストテンプレート">リストテンプレート</a></li>
+    <li><a href="#シングルページ">シングルページ</a></li>
+    <li><a href="#タクソノミーテンプレート">タクソノミーテンプレート</a></li>
+    <li><a href="#最後に">最後に</a></li>
+  </ul>
+</nav>
+                
+                <p>HugoのLayoutの中身について理解していきます。</p>
+<p>Layoutの中身は要はテンプレートで、各種ページのHTMLがレンダリングされる際にこれらのテンプレートが使用されます。</p>
+<h2 id="hugoのページ構成">Hugoのページ構成</h2>
+<p><a href="https://gohugo.io/templates/section-templates/">Section Page Templates</a></p>
+<h3 id="contentディレクトリ">Contentディレクトリ</h3>
+<p>HTMLレンダリング前の構成は以下のようになります。</p>
+<pre><code>content/
+  ├── _index.html（ホームページ）
+  ├── page-1.md（通常ページ）
+  ├── page-2.md（通常ページ）
+  ├── section-1/
+  │     ├── _index.html（セクションページ）
+  │     ├── page-1-1.html（通常ページ）
+  │     └── page-1-2.html（通常ページ）
+  └── section-2/
+        ├── _index.html（セクションページ）
+        ├── page-2-1.html（通常ページ）
+        └── page-2-2.html（通常ページ）
+</code></pre><p>これらの各ページに対してHugoが適用するテンプレートを優先度付けしています。</p>
+<h3 id="ページの種類">ページの種類</h3>
+<p>テンプレートが適用されて、HTMLレンダリング後のページの種類は以下のようになります。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">種類</th>
+<th style="text-align:left">説明</th>
+<th style="text-align:left">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">home</td>
+<td style="text-align:left">ホームページ</td>
+<td style="text-align:left">/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">page</td>
+<td style="text-align:left">通常ページ</td>
+<td style="text-align:left">/posts/{投稿名}/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">section</td>
+<td style="text-align:left">セクションページ</td>
+<td style="text-align:left">/{セクション名}/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">taxonomy</td>
+<td style="text-align:left">分類一覧ページ</td>
+<td style="text-align:left">/tags/index.html や /categories/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">term</td>
+<td style="text-align:left">分類絞り込みページ</td>
+<td style="text-align:left">/tags/{タグ名}/index.html や /categories/{カテゴリ名}/index.html</td>
+</tr>
+</tbody>
+</table>
+<p><code>分類一覧ページ</code>や<code>分類絞り込みページ</code>は、通常ページの設定を読み取ってレンダリングされるページです。</p>
+<h2 id="ホームページ">ホームページ</h2>
+<p><a href="https://gohugo.io/templates/homepage/">Homepage Template</a></p>
+<p>ホームページ（content/_index.html)をレンダリングする場合の優先度です。</p>
+<ol>
+<li>/layouts/index.html</li>
+<li>/layouts/home.html</li>
+<li>/layouts/list.html</li>
+<li>/layouts/_default/index.html</li>
+<li>/layouts/_default/home.html</li>
+<li>/layouts/_default/list.html</li>
+<li>/themes/{テーマ名}/layouts/index.html</li>
+<li>/themes/{テーマ名}/layouts/home.html</li>
+<li>/themes/{テーマ名}/layouts/list.html</li>
+<li>/themes/{テーマ名}/layouts/_default/index.html</li>
+<li>/themes/{テーマ名}/layouts/_default/home.html</li>
+<li>/themes/{テーマ名}/layouts/_default/list.html</li>
+</ol>
+<p>基本ルールは以下のようになります。</p>
+<ul>
+<li>テーマより、独自で定義したテンプレートが優先される</li>
+<li>_defaultフォルダ内より、layouts直下のテンプレートが優先される</li>
+<li>汎用のリストテンプレートなどより、より特化したテンプレートが優先される</li>
+</ul>
+<h2 id="セクションページ">セクションページ</h2>
+<p><a href="https://gohugo.io/templates/section-templates/">Section Page Templates</a></p>
+<p>セクションページ（content/{section_name}/_index.md）をレンダリングする場合の優先度です。</p>
+<ol>
+<li>/layouts/section/{セクション名}.html ← セクション特化型テンプレート</li>
+<li>/layouts/{セクション名}/list.html ← セクション特化型リストテンプレート</li>
+<li>/layouts/_default/section.html</li>
+<li>/layouts/_default/list.html</li>
+<li>省略（テーマ内のテンプレートが上記の優先度と同様使用される）</li>
+</ol>
+<p><code>{セクション名}</code> は特定のセクション名の時だけ使用されるテンプレートです。</p>
+<h2 id="リストテンプレート">リストテンプレート</h2>
+<p><a href="https://gohugo.io/templates/lists/">Lists of Content in Hugo</a></p>
+<p>ホームページやセクションページの優先度でも、リストテンプレートが出てきましたね。</p>
+<p>リストテンプレートは、特定のグループ内の記事一覧を表示するためのテンプレートです。
+例えば、セクションページでリストテンプレートが使用された場合、そのセクションの記事リストを表示するような結果になります。</p>
+<h2 id="シングルページ">シングルページ</h2>
+<p><a href="https://gohugo.io/templates/single-page-templates/">Single Page Templates</a></p>
+<p>通常ページ(content/{投稿名}.md)に適用されるテンプレートです。</p>
+<ol>
+<li>/layouts/{タイプ名}/{レイアウト名}.html</li>
+<li>/layouts/{セクション名}/{レイアウト名}.html</li>
+<li>/layouts/{タイプ名}/single.html</li>
+<li>/layouts/{セクション名}/single.html</li>
+<li>/layouts/_default/single.html</li>
+<li>省略（テーマ内のテンプレートが上記の優先度と同様使用される）</li>
+</ol>
+<h2 id="タクソノミーテンプレート">タクソノミーテンプレート</h2>
+<p><a href="https://gohugo.io/templates/taxonomy-templates/">Taxonomy Templates</a></p>
+<p>分類一覧ページとして表示されるテンプレートです。</p>
+<ol>
+<li>layouts/_default/category.terms.html</li>
+<li>layouts/_default/terms.html</li>
+<li>layouts/_default/taxonomy.html</li>
+<li>layouts/_default/list.html</li>
+<li>省略（テーマ内のテンプレートが上記の優先度と同様使用される）</li>
+</ol>
+<h2 id="最後に">最後に</h2>
+<p><a href="https://gohugo.io/templates/lookup-order/">Hugo&rsquo;s Lookup Order</a></p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-directorystructure/" data-toggle="tooltip" data-placement="top" title="Hugoのディレクトリ構造を理解する">&larr; 前の投稿</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/hugo-syntax/" data-toggle="tooltip" data-placement="top" title="Hugoの文法を理解する">次の投稿 &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+<section>
+    <hr class="hidden-sm hidden-xs">
+    <h5><a href="https://choihack.com/tags/">タグ一覧</a></h5>
+    <div class="tags">
+        
+            <a href="https://choihack.com/tags/git" title="git">git</a>
+        
+            <a href="https://choihack.com/tags/hugo" title="hugo">hugo</a>
+        
+            <a href="https://choihack.com/tags/layout" title="layout">layout</a>
+        
+            <a href="https://choihack.com/tags/%E3%82%B3%E3%83%AD%E3%83%8A" title="コロナ">コロナ</a>
+        
+            <a href="https://choihack.com/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF" title="ライフハック">ライフハック</a>
+        
+            <a href="https://choihack.com/tags/%E8%AA%AD%E6%9B%B8" title="読書">読書</a>
+        
+    </div>
+</section>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="ちょいハック" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   
+                    
+
+                    
+                    <li>
+                        <a href="https://twitter.com/magic4141">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; ちょいハック 2021
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+</body>
+</html>
