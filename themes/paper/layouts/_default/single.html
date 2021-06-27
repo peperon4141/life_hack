@@ -1,0 +1,26 @@
+{{ define "header" }}
+    <div class="tags">
+        {{ range .Params.tags }}
+        <a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+            {{ . }}
+        </a>
+        {{ end }}
+    </div>
+{{ end }}
+
+{{ define "main" }}
+    <section>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+    </section>
+    
+    <section>
+        <h2>目次</h2>
+        {{ .TableOfContents }}
+    </section>
+
+    <section>
+        {{ .Content }}
+    </section>
+
+{{ end }}

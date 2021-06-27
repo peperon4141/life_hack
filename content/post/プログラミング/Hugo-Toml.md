@@ -5,7 +5,7 @@ tags: ["hugo"]
 categories: ["hugo"]
 series: ["hugo"]
 featured_image: ""
-description: ""
+description: "HugoのTomlファイルの書き方を説明します。"
 ---
 TOMLの記法についてまとめます。
 

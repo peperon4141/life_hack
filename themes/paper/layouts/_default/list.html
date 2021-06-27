@@ -1,0 +1,43 @@
+{{ define "main" }}
+    <!-- post list -->
+    {{ range $index, $element := ($.Paginator 20).Pages }}
+    <ul>
+        <li>
+            <a href="{{ .Permalink }}">
+                <h3 class="post-title">
+                    {{ .Title }}
+                </h3>
+            </a>
+            <div class="post-summary">
+                {{ with .Description }}
+                    {{ . }}
+                {{ else }}
+                    {{ .Summary}}
+                {{ end }}
+            </div>
+            <p class="post-meta">
+                {{ .Date.Format "2006/01/06" }}
+            </p>
+        </li>
+    </ul>
+    {{ end }}
+
+
+    <!-- Pagination -->
+    {{ $pag := $.Paginator }}
+    {{ if gt $pag.TotalPages 1 }}
+    <ul class="pager">
+        {{ if $pag.HasPrev }}
+        <li class="previous">
+            <a href="{{ $pag.Prev.URL }}">&larr; 新しい投稿</a>
+        </li>
+        {{ end }}
+        {{ if $pag.HasNext }}
+        <li class="next">
+            <a href="{{ $pag.Next.URL }}">古い投稿 &rarr;</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+{{ end }}

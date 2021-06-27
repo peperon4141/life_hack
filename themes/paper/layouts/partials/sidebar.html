@@ -1,0 +1,28 @@
+<div class="category">
+    <h3>Category</h3>
+    {{ range .Sections }}
+        <div>{{ .Title }}</div>
+    {{ end }}
+    <ul>
+        <li>Home</li>
+        <li>Programing</li>
+        <li>Finance</li>
+        <li>About</li>
+    </ul>
+</div>
+<div class="tags">
+    <h3>Tags</h3>
+    <div class="tag-list">
+        {{ range .Site.Taxonomies.tags.ByCount }}
+            <a href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}">{{ .Name }}({{ .Count }})</a>
+        {{ end }}
+    </div>
+</div>
+<div class="profile">
+    <h3>Profile</h3>
+    {{ with .Site.Params.sidebar_avatar }}
+        <a href="{{ "/top/about" | relLangURL }}">
+            <img src="{{ . | relURL }}" alt="avatar" style="cursor: pointer" />
+        </a>
+    {{ end }}
+</div>

@@ -1,0 +1,8 @@
+<div class="logo">
+    <img src="/img/icon.png" alt="logo">
+</div>
+
+<a href="{{ "/" | relLangURL }}">Home</a>
+{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+{{ end }}

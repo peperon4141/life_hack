@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+        <nav class="global">
+            {{ partial "nav.html" . }}
+        </nav>
+        <!-- <header>
+            {{ block "header" . }}{{ end }}
+        </header> -->
+
+        <section class="contents">
+            <main>
+                {{ block "main" . }}{{ end }}
+            </main>
+    
+            <aside>
+                {{ partial "sidebar.html" . }}
+            </aside>
+        </section>
+
+        <footer>
+            {{ partial "footer.html" . }}
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+:root {
+  --main-bg-color: rgb(255, 255, 255);
+  --dark: rgb(51, 51, 51);
+  --dark2: rgb(120, 120, 120);
+  --light-dark2: rgb(250, 251, 252);
+  --light-dark: rgb(225, 228, 232);
+  --content-width: 1200px;
+}
+
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  font-smooth: antialiased;
+  text-decoration: none;
+  list-style: none;
+}
+
+html, body {
+  background-color: var(--main-bg-color);
+}
+
+/* Navigation -------- start */
+nav.global {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: var(--dark);
+}
+nav.global a {
+  padding: 10px 20px;
+  color: #fff;
+}
+
+nav.global .logo {
+  width: 30px;
+  height: 30px;
+  margin: 12px;
+}
+
+/* Navigation -------- end */
+
+/* Main -------- start */
+section.contents {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+h1 { font-weight: 400; font-size: 2.4em; margin: 16px 0; }
+h2 { font-weight: 400; font-size: 1.6em; margin: 20px 0; border-bottom: 2px solid var(--light-dark); }
+h3 { font-weight: 400; font-size: 1.2em; }
+
+main {
+  background-color: #ffffff;
+  max-width: calc(var(--content-width) - 240px);
+  border-radius: 8px;
+  border: 2px solid var(--light-dark);
+}
+
+main > section { padding: 12px 24px; }
+
+main > section:nth-child(n+2) { border-top: 1px solid var(--light-dark); }
+
+/* Main -------- end */
+
+/* Header -------- start */
+header {
+  background-color: var(--light-dark2);
+  border-bottom: 1px solid var(--light-dark);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* Header -------- end */
+
+/* Footer -------- start */
+footer {
+  width: var(--content-width);
+  padding: 20px;
+  border-top: 1px solid var(--light-dark);
+  margin: 0 auto;
+}
+
+/* Footer -------- end */
+
+/* Sidebar -------- start */
+aside {
+  width: 240px;
+  margin-left: 20px;
+}
+
+aside > div:nth-child(n+2) {
+  border-top: 1px solid var(--light-dark);
+  padding: 20px 0 20px 0;
+}
+
+/* Sidebar -------- end */
+
+/* Code -------- start */
+pre {
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: var(--dark);
+}
+
+/* Code -------- end */
