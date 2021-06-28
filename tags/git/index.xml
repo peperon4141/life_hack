@@ -6,7 +6,16 @@
     <description>Recent content in Git on ちょいハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 15 May 2021 09:27:35 +0900</lastBuildDate><atom:link href="https://choihack.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Jun 2021 09:35:31 +0900</lastBuildDate><atom:link href="https://choihack.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHubPagesの制限</title>
+      <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/github-githubpages%E3%81%AE%E5%88%B6%E9%99%90/</link>
+      <pubDate>Mon, 28 Jun 2021 09:35:31 +0900</pubDate>
+      
+      <guid>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/github-githubpages%E3%81%AE%E5%88%B6%E9%99%90/</guid>
+      <description>このサイトではGitHub Pagesを使用して運用しています。 Github Pagesでの制限について整理します。 この記事の内容は主に以下をまとめたもの</description>
+    </item>
+    
     <item>
       <title>git pullした時にwarningが出力された</title>
       <link>https://choihack.com/post/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/git-pull%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC/</link>
