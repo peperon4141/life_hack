@@ -3,11 +3,11 @@ title: "Hugo GithubPagesで公開"
 description: "Hugoで生成したページをGithubPagesで独自ドメインで公開します"
 featured_image: ""
 date: 2021-03-08T09:16:57+09:00
-tags: ["Hugo"]
+tags: ["Hugo", "Git"]
 categories: ["Hugo"]
 series: ["Hugo"]
 ---
-Githubは、GithubPagesという機能があり、docsディレクトリを公開することができます。  
+Githubは、GithubPagesという機能があり、指定したディレクトリを公開することができます。  
 Publicなリポジトリだけの機能です。  
 この機能を使って、Hugoで作ったウェブサイトを独自ドメインで公開していきます。  
 
