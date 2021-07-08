@@ -6,22 +6,22 @@
     <description>Recent content in Tags on ちょいハック</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 28 Jun 2021 09:35:31 +0900</lastBuildDate><atom:link href="https://choihack.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 11:35:35 +0900</lastBuildDate><atom:link href="https://choihack.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://choihack.com/tags/hugo/</link>
+      <pubDate>Thu, 08 Jul 2021 11:35:35 +0900</pubDate>
+      
+      <guid>https://choihack.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Git</title>
       <link>https://choihack.com/tags/git/</link>
       <pubDate>Mon, 28 Jun 2021 09:35:31 +0900</pubDate>
       
       <guid>https://choihack.com/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://choihack.com/tags/hugo/</link>
-      <pubDate>Mon, 28 Jun 2021 09:35:31 +0900</pubDate>
-      
-      <guid>https://choihack.com/tags/hugo/</guid>
       <description></description>
     </item>
     
