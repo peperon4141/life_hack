@@ -276,13 +276,13 @@ if (!doNotTrack) {
 <code>{{ .URL | safeURL }}</code></p>
 <p>HTMLタグをエスケープする。<br>
 <code>{{ .Site.Copyright | safeHTML }}</code>
-<code>© 2015 Jane Doe.  &lt;a href=&quot;https://creativecommons.org/licenses/by/4.0/&quot;&gt;Some rights reserved&lt;/a&gt;.</code>
-↓
+<code>© 2015 Jane Doe.  &lt;a href=&quot;https://creativecommons.org/licenses/by/4.0/&quot;&gt;Some rights reserved&lt;/a&gt;.</code><br>
+↓<br>
 <code>&lt;p&gt;© 2015 Jane Doe.  &amp;lt;a href=&amp;#34;https://creativecommons.org/licenses by/4.0/&amp;#34;&amp;gt;Some rights reserved&amp;lt;/a&amp;gt;.&lt;/p&gt;</code></p>
 <p>Style属性を出力する。<br>
 <code>safeCSS</code>を使用しなければ<code>#ZgotmplZ</code>が表示される。<br>
-<code>&lt;p style=&quot;{{ .Params.style | safeCSS }}&quot;&gt;…&lt;/p&gt;</code>
-↓
+<code>&lt;p style=&quot;{{ .Params.style | safeCSS }}&quot;&gt;…&lt;/p&gt;</code><br>
+↓<br>
 <code>&lt;p style=&quot;color: red;&quot;&gt;…&lt;/p&gt;</code></p>
 
 
