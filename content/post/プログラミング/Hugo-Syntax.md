@@ -66,19 +66,3 @@ Hello HUGO World!
 ```
 {{ partial "header" . }}
 ```
-
-## range end
-```
-{{ partial "header" . }}
-```
-
-## Dot
-{{ .Title }}
-
-## if
-
-## With
-
-
-
-## ショートコード
