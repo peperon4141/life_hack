@@ -52,13 +52,13 @@ Hugoの頻出の変数・関数についてまとめます。
 
 HTMLタグをエスケープする。  
 `{{ .Site.Copyright | safeHTML }}`
-`© 2015 Jane Doe.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.`
-↓
+`© 2015 Jane Doe.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.`  
+↓  
 `<p>© 2015 Jane Doe.  &lt;a href=&#34;https://creativecommons.org/licenses by/4.0/&#34;&gt;Some rights reserved&lt;/a&gt;.</p>`
 
 
 Style属性を出力する。  
 `safeCSS`を使用しなければ`#ZgotmplZ`が表示される。  
-`<p style="{{ .Params.style | safeCSS }}">…</p>`
-↓
+`<p style="{{ .Params.style | safeCSS }}">…</p>`  
+↓  
 `<p style="color: red;">…</p>`
