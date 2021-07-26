@@ -35,7 +35,7 @@ jobs:
           HUGO_VERSION: 0.79.0
               
       - name: Hugo build
-        run: hugo
+        run: HUGO_ENV=production hugo
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
