@@ -1,11 +1,12 @@
 title = "ちょいハック"
 theme = "darkwhite"
+description = "ちょっとしたライフハックや身の周りのあれこれブログ"
 # theme = "cleanwhite"
 languageCode = "ja-jp"
 googleAnalytics = "UA-189749451-1"
 paginate = 5 #frontpage pagination
 hasCJKLanguage = true
-publishDir = "docs" # ビルド時の出力ディレクトリ
+baseURL = "https://choihack.com/"
 
 [outputs]
 home = ["HTML", "RSS", "AMP", "Algolia"]

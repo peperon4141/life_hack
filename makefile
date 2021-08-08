@@ -2,7 +2,7 @@ start:
 	rm -rf ./resources && hugo server --disableFastRender
 
 build:
-	rm -rf ./docs && hugo
+	rm -rf ./public && hugo
 
 add:
 	git submodule add ${REPO} ${PATH}
