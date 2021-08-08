@@ -88,6 +88,16 @@
     {{ range .Site.Params.custom_js }}
     <script src="{{ . | absURL }}"></script>
     {{ end }}
+    
+    <!-- Misc -->
+    {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+        {{- template "_internal/google_analytics.html" . -}}
+        {{- template "_internal/opengraph.html" . }}
+        
+        {{ with .Site.Params.GoogleAdsense }}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
+        {{- end -}}
+    {{- end }}
 
 </head>
 
