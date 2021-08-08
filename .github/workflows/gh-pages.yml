@@ -17,7 +17,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -26,19 +26,16 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true
-
-      - name: Install Hugo
-        run: |
-          curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-64bit.tar.gz | tar -xz
-          sudo mv hugo /usr/local/bin/hugo
-        env:
-          HUGO_VERSION: 0.79.0
-              
+          token: ${{ secrets.ACCESS_TOKEN }}
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.85.0'
+          extended: true
       - name: Hugo build
-        run: HUGO_ENV=production hugo
-
+        run: HUGO_ENV=production hugo --minify
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./public
